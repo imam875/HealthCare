@@ -1,10 +1,13 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
+import 'package:healthpro/data/fooddata.dart';
+import 'package:healthpro/data/healthdata.dart';
 import 'package:healthpro/fooddetails.dart';
 import 'package:healthpro/healthcategory.dart';
 import 'package:healthpro/model/about_us.dart';
@@ -22,18 +25,10 @@ class DashBoard extends StatefulWidget {
 class _DashBoardState extends State<DashBoard> {
 
                  //Foodmodel function
-  Future<List<FoodModel>> foodfunction() async {
-    final foodProduct = await rootBundle.loadString("jsondata/foodinfo.json");
-    final foodlist = json.decode(foodProduct) as List<dynamic>;
-    return foodlist.map((e) => FoodModel.fromJson(e)).toList();
-  }
+
 
                  //Healthmodel functoion
-  Future<List<HealthModel>> healthfunction() async {
-    final healthProduct = await rootBundle.loadString("jsondata/healthinfo.json");
-    final healthlist = json.decode(healthProduct) as List<dynamic>;
-    return healthlist.map((e) => HealthModel.fromJson(e)).toList();
-  }
+
 
 
 
@@ -426,8 +421,6 @@ class _DashBoardState extends State<DashBoard> {
                                child: CarouselSlider(
                                    items: [
                                Container(
-
-
                                  child: Card(
                                  shape: RoundedRectangleBorder(
                                  side: const BorderSide(width: 3),
@@ -747,7 +740,13 @@ class _PopupMenuContentState extends State<PopupMenuContent>
                             ),
 
                             GestureDetector(
-                              onTap: () => _closePopup("Exit"),
+                              onTap: (){
+                                if ( Platform.isAndroid){
+                                  SystemNavigator.pop();
+                                }else{
+                                  exit(0);
+                                }
+                              },
                               child: Row(
                                 children: [
                                   Container(

@@ -20,29 +20,25 @@ class FoodDetails extends StatefulWidget {
 }
 
 class _DashBoardState extends State<FoodDetails> {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.name,style :TextStyle(fontSize: 16),),
-      ),
       backgroundColor: const Color(0xFFE9E9E9),
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
+            title: Text(widget.name,style :TextStyle(fontSize: 30),),
             pinned: true,
             snap: true,
             floating: true,
             backgroundColor: const Color(0xFF200087),
             expandedHeight: 300,
             shape: const RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(40))),
+                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30), bottomRight: Radius.circular(30))),
             flexibleSpace: FlexibleSpaceBar(
               background: ClipRRect(
                 borderRadius:
-                const BorderRadius.vertical(bottom: Radius.circular(40)),
+                const BorderRadius.vertical(bottom: Radius.circular(30)),
                 child: Image.asset(
                   widget.image
                   ,
@@ -62,7 +58,7 @@ class _DashBoardState extends State<FoodDetails> {
                     widget.name,
                     style: TextStyle(
                       fontWeight: FontWeight.w800,
-                      fontSize: 14,
+                      fontSize: 25,
                       color: Colors.indigoAccent,
                     ),
                   ),
@@ -81,7 +77,7 @@ class _DashBoardState extends State<FoodDetails> {
                             style: TextStyle(
                                 color: Colors.grey,
                                 fontWeight: FontWeight.w600,
-                                fontSize: 16),
+                                fontSize: 20),
                           ),
                         ],
                       ),
@@ -132,12 +128,30 @@ class _DashBoardState extends State<FoodDetails> {
 
                  Padding(
                   padding: EdgeInsets.only(left: 16, right: 16, bottom: 32),
-                  child: Text(
-                    widget.description
-                    ,
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
+                  child: Card(
+
+                    color: Colors.white,
+                    elevation: 10,
+                    shape: OutlineInputBorder(
+                      borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(25),
+                          topLeft: Radius.circular(20),
+                          bottomRight: Radius.circular(20),
+                          bottomLeft: Radius.circular(20)),
+                      borderSide: BorderSide(color: Colors.white),
+                    ),
+
+
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        widget.description
+                        ,
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
                     ),
                   ),
                 ),
