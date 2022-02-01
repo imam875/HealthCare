@@ -10,6 +10,7 @@ import 'package:healthpro/healthcategory.dart';
 import 'package:healthpro/model/about_us.dart';
 import 'package:healthpro/model/foodmodel.dart';
 import 'package:healthpro/model/healthmodel.dart';
+import 'package:healthpro/model/privacy_policy.dart';
 
 class DashBoard extends StatefulWidget {
   const DashBoard({Key? key}) : super(key: key);
@@ -679,7 +680,9 @@ class _PopupMenuContentState extends State<PopupMenuContent>
                             ),
 
                             GestureDetector(
-                              onTap: () => _closePopup("Privacy Policy"),
+                              onTap: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>PrivacyPolicy()));
+                              },
                               child: Row(
                                 children: [
                                   Container(
