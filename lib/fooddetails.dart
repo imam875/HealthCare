@@ -27,7 +27,7 @@ class _DashBoardState extends State<FoodDetails> {
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
-            title: Text(widget.name,style :TextStyle(fontSize: 28),),
+            title: Text(widget.name,style :TextStyle(fontSize: 24),),
             pinned: true,
             snap: true,
             floating: true,
@@ -39,10 +39,12 @@ class _DashBoardState extends State<FoodDetails> {
               background: ClipRRect(
                 borderRadius:
                 const BorderRadius.vertical(bottom: Radius.circular(30)),
-                child: Image.asset(
-                  widget.image
-                  ,
-                  fit: BoxFit.cover,
+                child: SafeArea(
+                  child: Image.asset(
+                    widget.image
+                    ,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),

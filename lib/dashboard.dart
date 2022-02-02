@@ -1,4 +1,4 @@
-import 'dart:convert';
+
 import 'dart:io';
 
 import 'package:carousel_slider/carousel_slider.dart';
@@ -9,7 +9,6 @@ import 'package:flutter/widgets.dart';
 import 'package:healthpro/data/fooddata.dart';
 import 'package:healthpro/data/healthdata.dart';
 import 'package:healthpro/fooddetails.dart';
-import 'package:healthpro/healthcategory.dart';
 import 'package:healthpro/model/about_us.dart';
 import 'package:healthpro/model/foodmodel.dart';
 import 'package:healthpro/model/healthmodel.dart';
@@ -23,155 +22,180 @@ class DashBoard extends StatefulWidget {
 }
 
 class _DashBoardState extends State<DashBoard> {
+  //Foodmodel function
 
-                 //Foodmodel function
-
-
-                 //Healthmodel functoion
-
-
-
+  //Healthmodel functoion
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Row(
-          children: [
-            const Spacer(),
-            MyPopupMenu(
-              child: Icon(
-                Icons.menu_rounded,
-                key: GlobalKey(),
-                color: Colors.black87,
-                size: 24,
+        appBar: AppBar(
+          backgroundColor: Colors.white10,
+          systemOverlayStyle: SystemUiOverlayStyle(
+            // Status bar color
+            statusBarColor: Colors.blue,
+
+            // Status bar brightness (optional)
+            statusBarIconBrightness:
+                Brightness.dark, // For Android (dark icons)
+          ),
+          title: Row(
+            children: [
+              const Spacer(),
+              MyPopupMenu(
+                child: Icon(
+                  Icons.menu_rounded,
+                  key: GlobalKey(),
+                  color: Colors.black87,
+                  size: 24,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
-
-      ),
-      backgroundColor: Colors.grey,
+        backgroundColor: Colors.grey,
         body: Column(
-      children: [
-        Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height*.84,
-            child: Column(
-              children: [
-                //abouat text section
-                SizedBox(
-                    width: MediaQuery.of(context).size.width,
-                    child: const Padding(
-                      padding: EdgeInsets.all(5.0),
-                      child: Text(
-                        "About Food",
-                        style: TextStyle(fontSize: 20),
-                      ),
-                    )),
+          children: [
+            Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height * .84,
+                child: Column(children: [
+                  //abouat text section
+                  SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                      child: const Padding(
+                        padding: EdgeInsets.all(5.0),
+                        child: Text(
+                          "About Food",
+                          style: TextStyle(fontSize: 20),
+                        ),
+                      )),
 
-                //Category section food
-                FutureBuilder(
-                    future: foodfunction(),
-                    builder: (context, imam) {
-                      var Hossen = imam.data as List<FoodModel>;
-                      return Container(
-                        height: 222,
-                        width: MediaQuery.of(context).size.width,
-                        child: ListView.builder(
-                            scrollDirection: Axis.horizontal,
-                            itemCount: Hossen.length,
-                            itemBuilder: (context, index) {
-                              return Padding(
-                                padding: const EdgeInsets.all(10),
-                                child: InkWell(
-                                  child: Card(
-                                    shape: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(30),
-                                        borderSide: const BorderSide(
-                                            color: Colors.white)),
-                                    elevation: 15,
-                                    child: Container(
-                                      height: MediaQuery.of(context).size.height,
-                                      width: MediaQuery.of(context).size.width * .70,
-                                      child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.start,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                          Container(
-                                            height: 130,
-                                            width: MediaQuery.of(context).size.width*.8,
-                                            child: ClipRRect(
-                                              child: Image.asset(
-                                                Hossen[index].image.toString(),
-                                                fit: BoxFit.cover,
+                  //Category section food
+                  FutureBuilder(
+                      future: foodfunction(),
+                      builder: (context, imam) {
+                        var Hossen = imam.data as List<FoodModel>;
+                        return Container(
+                          height: 222,
+                          width: MediaQuery.of(context).size.width,
+                          child: ListView.builder(
+                              scrollDirection: Axis.horizontal,
+                              itemCount: Hossen.length,
+                              itemBuilder: (context, index) {
+                                return Padding(
+                                  padding: const EdgeInsets.all(10),
+                                  child: InkWell(
+                                    child: Card(
+                                      shape: OutlineInputBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(30),
+                                          borderSide: const BorderSide(
+                                              color: Colors.white)),
+                                      elevation: 15,
+                                      child: Container(
+                                        height:
+                                            MediaQuery.of(context).size.height,
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                .70,
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Container(
+                                              height: 130,
+                                              width: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                  .8,
+                                              child: ClipRRect(
+                                                child: Image.asset(
+                                                  Hossen[index]
+                                                      .image
+                                                      .toString(),
+                                                  fit: BoxFit.cover,
+                                                ),
+                                                borderRadius:
+                                                    BorderRadius.circular(30),
                                               ),
-                                              borderRadius:
-                                                  BorderRadius.circular(30),
                                             ),
-                                          ),
-                                          Padding(
-                                            padding: const EdgeInsets.only(
-                                                left: 5.0, top: 5),
-                                            child: Text(
-                                                Hossen[index].name.toString(),
-                                                textAlign: TextAlign.left,
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  left: 5.0, top: 5),
+                                              child: Text(
+                                                  Hossen[index].name.toString(),
+                                                  textAlign: TextAlign.left,
+                                                  style: const TextStyle(
+                                                      fontSize: 14,
+                                                      fontWeight:
+                                                          FontWeight.bold)),
+                                            ),
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  left: 5.0),
+                                              child: Text(
+                                                Hossen[index]
+                                                    .category
+                                                    .toString(),
                                                 style: const TextStyle(
-                                                    fontSize: 14,
-                                                    fontWeight: FontWeight.bold)),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                const EdgeInsets.only(left: 5.0),
-                                            child: Text(
-                                              Hossen[index].category.toString(),
-                                              style:
-                                                  const TextStyle(fontSize: 14),
+                                                    fontSize: 14),
+                                              ),
                                             ),
-                                          ),
-                                        ],
+                                          ],
+                                        ),
                                       ),
                                     ),
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (Contex) => FoodDetails(
+                                                    Hossen[index]
+                                                        .name
+                                                        .toString(),
+                                                    Hossen[index]
+                                                        .title
+                                                        .toString(),
+                                                    Hossen[index]
+                                                        .subtitle
+                                                        .toString(),
+                                                    Hossen[index]
+                                                        .category
+                                                        .toString(),
+                                                    Hossen[index]
+                                                        .description
+                                                        .toString(),
+                                                    Hossen[index]
+                                                        .image
+                                                        .toString(),
+                                                  )));
+                                    },
                                   ),
-                                  onTap: (){
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (Contex)=>FoodDetails(
-                                              Hossen[index].name.toString(),
-                                              Hossen[index].title.toString(),
-                                              Hossen[index].subtitle.toString(),
-                                              Hossen[index].category.toString(),
-                                              Hossen[index].description.toString(),
-                                              Hossen[index].image.toString(),
+                                );
+                              }),
+                        );
+                      }),
 
-                                            )
-                                        )
-                                    );
-                                  },
-                                ),
-                              );
-                            }),
-                      );
-                    }),
-
-                // about text section
-                Container(
-                  height: 40,
-                  child: Padding(
-                    padding: const EdgeInsets.all(5.0),
-                    child: Container(
-                        height: 22,
-                        child: const Text(
-                          "Just keep it",
-                          style: TextStyle(
-                              fontSize: 22, fontWeight: FontWeight.bold),
-                        )),
+                  // about text section
+                  Container(
+                    height: 40,
+                    child: Padding(
+                      padding: const EdgeInsets.all(5.0),
+                      child: Container(
+                          height: 22,
+                          child: const Text(
+                            "Just keep it",
+                            style: TextStyle(
+                                fontSize: 22, fontWeight: FontWeight.bold),
+                          )),
+                    ),
                   ),
-                ),
 
-                //Slider section
-               /* Padding(
+                  //Slider section
+                  /* Padding(
                   padding: const EdgeInsets.only(top: 5, bottom: 5),
                   child: CarouselSlider(
                       items: [
@@ -402,7 +426,7 @@ class _DashBoardState extends State<DashBoard> {
                       )),
                 ),*/
 
-                FutureBuilder(
+                  /*FutureBuilder(
                     future: healthfunction(),
                     builder: (context, Healthm) {
                       var health = Healthm.data as List<HealthModel>;
@@ -442,7 +466,7 @@ class _DashBoardState extends State<DashBoard> {
                                             ),
                                           ),
                                       ),
-                                      Text(health[index].name.toString(),style: TextStyle(fontSize: 20),),
+                                      Text(index.toString()+health[index].name.toString(),style: TextStyle(fontSize: 20),),
                                     ],
                                   ),
                                   ),
@@ -470,12 +494,112 @@ class _DashBoardState extends State<DashBoard> {
                              );
                             }),
                       );
-                    }),
-              ],
-            )),
-      ],
-    )
-    );
+                    }),*/
+
+                  Container(
+                      height: MediaQuery.of(context).size.height * .35,
+                      child: FutureBuilder(
+                          future: healthfunction(),
+                          builder: (context, info) {
+                            var list = info.data as List<HealthModel>;
+                            return ListView.builder(
+                                scrollDirection: Axis.horizontal,
+                                itemCount: list.length,
+                                itemBuilder: (context, index) {
+                                  return Padding(
+                                      padding: const EdgeInsets.all(10),
+                                      child: InkWell(
+                                        child: CarouselSlider(
+                                          items: [
+                                            Card(
+                                              shape: OutlineInputBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(30),
+                                                  borderSide: const BorderSide(
+                                                      color: Colors.white)),
+                                              elevation: 15,
+                                              child: Container(
+                                                height: MediaQuery.of(context)
+                                                    .size
+                                                    .height,
+                                                width: MediaQuery.of(context)
+                                                        .size
+                                                        .width *
+                                                    .70,
+                                                child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.start,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.start,
+                                                  children: [
+                                                    Container(
+                                                      height: 180,
+                                                      width:
+                                                          MediaQuery.of(context)
+                                                                  .size
+                                                                  .width *
+                                                              .8,
+                                                      child: ClipRRect(
+                                                        child: Image.asset(
+                                                          list[index]
+                                                              .image
+                                                              .toString(),
+                                                          fit: BoxFit.cover,
+                                                        ),
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(30),
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              left: 5.0,
+                                                              top: 5),
+                                                      child: Text(
+                                                          list[index]
+                                                              .name
+                                                              .toString(),
+                                                          textAlign:
+                                                              TextAlign.left,
+                                                          style: const TextStyle(
+                                                              fontSize: 14,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold)),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                          options: CarouselOptions(
+                                            height: 240,
+                                            aspectRatio: 16 / 9,
+                                            viewportFraction: 0.8,
+                                            initialPage: 2,
+                                            enableInfiniteScroll: true,
+                                            reverse: false,
+                                            autoPlay: true,
+                                            autoPlayInterval:
+                                                const Duration(seconds: 3),
+                                            autoPlayAnimationDuration:
+                                                const Duration(
+                                                    milliseconds: 1200),
+                                            autoPlayCurve: Curves.linear,
+                                            enlargeCenterPage: true,
+                                            scrollDirection: Axis.horizontal,
+                                            disableCenter: false,
+                                            pageSnapping: false,
+                                          ),
+                                        ),
+                                        onTap: () {},
+                                      ));
+                                });
+                          }))
+                ]))
+          ],
+        ));
   }
 }
 
@@ -674,7 +798,10 @@ class _PopupMenuContentState extends State<PopupMenuContent>
 
                             GestureDetector(
                               onTap: () {
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=>PrivacyPolicy()));
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => PrivacyPolicy()));
                               },
                               child: Row(
                                 children: [
@@ -740,10 +867,10 @@ class _PopupMenuContentState extends State<PopupMenuContent>
                             ),
 
                             GestureDetector(
-                              onTap: (){
-                                if ( Platform.isAndroid){
+                              onTap: () {
+                                if (Platform.isAndroid) {
                                   SystemNavigator.pop();
-                                }else{
+                                } else {
                                   exit(0);
                                 }
                               },
