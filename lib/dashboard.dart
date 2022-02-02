@@ -100,7 +100,7 @@ class _DashBoardState extends State<DashBoard> {
                                         children: [
                                           Container(
                                             height: 130,
-                                            width: MediaQuery.of(context).size.width,
+                                            width: MediaQuery.of(context).size.width*.8,
                                             child: ClipRRect(
                                               child: Image.asset(
                                                 Hossen[index].image.toString(),
@@ -112,21 +112,21 @@ class _DashBoardState extends State<DashBoard> {
                                           ),
                                           Padding(
                                             padding: const EdgeInsets.only(
-                                                left: 8.0, top: 5),
+                                                left: 5.0, top: 5),
                                             child: Text(
                                                 Hossen[index].name.toString(),
                                                 textAlign: TextAlign.left,
                                                 style: const TextStyle(
-                                                    fontSize: 18,
+                                                    fontSize: 14,
                                                     fontWeight: FontWeight.bold)),
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsets.only(left: 8.0),
+                                                const EdgeInsets.only(left: 5.0),
                                             child: Text(
                                               Hossen[index].category.toString(),
                                               style:
-                                                  const TextStyle(fontSize: 16),
+                                                  const TextStyle(fontSize: 14),
                                             ),
                                           ),
                                         ],

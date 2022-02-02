@@ -13,7 +13,7 @@ class _TermsConditionsState extends State<TermsConditions> {
     return Scaffold(
       backgroundColor: Colors.grey,
       appBar: AppBar(
-        title: Center(child: Text("Terms and Conditions",style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),)),
+        title: Center(child: Text("Terms and Conditions",style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),)),
         backgroundColor: Colors.blueAccent,
       ),
       body: ListView(

@@ -27,12 +27,12 @@ class _DashBoardState extends State<FoodDetails> {
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
-            title: Text(widget.name,style :TextStyle(fontSize: 30),),
+            title: Text(widget.name,style :TextStyle(fontSize: 28),),
             pinned: true,
             snap: true,
             floating: true,
             backgroundColor: const Color(0xFF200087),
-            expandedHeight: 300,
+            expandedHeight: 270,
             shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30), bottomRight: Radius.circular(30))),
             flexibleSpace: FlexibleSpaceBar(
@@ -51,14 +51,14 @@ class _DashBoardState extends State<FoodDetails> {
             delegate: SliverChildListDelegate(
               [
                 const SizedBox(
-                  height: 20,
+                  height: 18,
                 ),
                 ListTile(
                   title:  Text(
                     widget.name,
                     style: TextStyle(
                       fontWeight: FontWeight.w800,
-                      fontSize: 25,
+                      fontSize: 20,
                       color: Colors.indigoAccent,
                     ),
                   ),
@@ -70,7 +70,7 @@ class _DashBoardState extends State<FoodDetails> {
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
                           SizedBox(
-                            width: 30,
+                            width: 26,
                           ),
                           Text(
                             widget.category,
@@ -84,25 +84,7 @@ class _DashBoardState extends State<FoodDetails> {
                       const SizedBox(
                         height: 4,
                       ),
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: const <Widget>[
-                          Icon(
-                            Icons.access_time,
-                            color: Colors.grey,
-                          ),
-                          SizedBox(
-                            width: 5,
-                          ),
-                          Text(
-                            "Strange Tales #110 (July 1963)",
-                            style: TextStyle(
-                                color: Colors.grey,
-                                fontWeight: FontWeight.w600,
-                                fontSize: 16),
-                          )
-                        ],
-                      ),
+
                     ],
                   ),
                 ),

@@ -45,8 +45,8 @@ class _AboutUsState extends State<AboutUs> {
                           child: Icon(Icons.arrow_back, size: 30,),
                         ),
                         SizedBox(width: 35,),
-                        Text("Developers of HealthPro", style: TextStyle(
-                            fontSize: 25),)
+                        Text("Developers of স্বাস্থ্য সেবা", style: TextStyle(
+                            fontSize: 22),)
                       ],),
                       elevation: 10,
                       shape: OutlineInputBorder(
@@ -65,7 +65,7 @@ class _AboutUsState extends State<AboutUs> {
                 padding: const EdgeInsets.all(8.0),
                 child: Center(
                   child: Container(
-                    height: MediaQuery.of(context).size.height*.30,
+                    height: MediaQuery.of(context).size.height*.45,
                     width: MediaQuery
                         .of(context)
                         .size
@@ -82,9 +82,12 @@ class _AboutUsState extends State<AboutUs> {
                             Text("Feedback", style: TextStyle(
                                 fontSize: 25, fontWeight: FontWeight.bold),),
                             SizedBox(height: 10,),
-                            Text(
-                              "If you love using this app, give a review in Google play store. It would really inspire us to keep this app alive. \nNote: Contract zihad650top@gmail.com for any further assistance.",
-                              style: TextStyle(fontSize: 20),)
+                            Container(
+                              height: MediaQuery.of(context).size.height*.30,
+                              child: Text(
+                                "If you love using this app, give a review in Google play store. It would really inspire us to keep this app alive. \nNote: Contract imamhossen983@gmail.com & \nzihad650top@gmail.com for any further assistance.",
+                                style: TextStyle(fontSize: 20),),
+                            )
                           ],),
                       ),
                       elevation: 10,
@@ -293,7 +296,7 @@ class _AboutUsState extends State<AboutUs> {
                             SizedBox(height: 20,),
                             Center(
                               child: Container(
-                                height: MediaQuery.of(context).size.height*.45,
+                                height: MediaQuery.of(context).size.height*.52,
                                 width: MediaQuery
                                     .of(context)
                                     .size

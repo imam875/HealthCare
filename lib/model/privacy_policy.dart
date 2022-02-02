@@ -15,7 +15,7 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
     return Scaffold(
       backgroundColor: Colors.grey,
       appBar: AppBar(
-        title: Center(child: Text("Privacy Policy",style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),)),
+        title: Center(child: Text("Privacy Policy",style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),)),
         backgroundColor: Colors.blueAccent,
       ),
       body: ListView(
