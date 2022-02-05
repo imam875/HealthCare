@@ -32,7 +32,7 @@ class _AboutUsState extends State<AboutUs> {
           children: [
             Column(
               children: [
-                Padding(
+              /*  Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Center(
                     child: Container(
@@ -62,7 +62,7 @@ class _AboutUsState extends State<AboutUs> {
                       ),
                     ),
                   ),
-                ),
+                ),*/
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Center(

@@ -1,38 +1,40 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'healthdetails.dart';
 
-class FoodDetails extends StatefulWidget {
+class HealthDetails extends StatefulWidget {
 
 
+  String id;
   String name;
-   String title;
-   String subtitle;
-   String category;
+  String title;
   String description;
   String image;
 
 
-  FoodDetails( this.name, this.title, this.subtitle, this.category,
-      this.description, this.image);
+  HealthDetails(this.id, this.name, this.title, this.description, this.image);
 
   @override
   _DashBoardState createState() => _DashBoardState();
 }
 
-class _DashBoardState extends State<FoodDetails> {
+class _DashBoardState extends State<HealthDetails> {
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       backgroundColor: const Color(0x1F1E1EFF),
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
-            foregroundColor: Colors.purple,shadowColor: Colors.blue,
-            title: Text(widget.name,style :TextStyle(fontSize: 24,),),
+             foregroundColor:Colors.purple ,
+            title: Container(
+
+                child: Text(widget.name,style :TextStyle(fontSize: 24),)),
             pinned: true,
             snap: true,
             floating: true,
-            backgroundColor: const Color(0xFF1C085A),
+
             expandedHeight: 220,
             shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30), bottomRight: Radius.circular(30))),
@@ -75,18 +77,11 @@ class _DashBoardState extends State<FoodDetails> {
                           SizedBox(
                             width: 26,
                           ),
-                          Text(
-                            widget.category,
-                            style: TextStyle(
-                                color: Colors.grey,
-                                fontWeight: FontWeight.w600,
-                                fontSize: 23),
-                          ),
+
+
                         ],
                       ),
-                      const SizedBox(
-                        height: 4,
-                      ),
+
 
                     ],
                   ),
@@ -95,14 +90,14 @@ class _DashBoardState extends State<FoodDetails> {
                   height: 20,
                 ),
 
-                 Padding(
+                Padding(
                   padding: EdgeInsets.symmetric(horizontal: 50),
                   child: Text(
                     widget.title
-                  ,
+                    ,
                     style: TextStyle(
                       fontWeight: FontWeight.w800,
-                      fontSize: 23,
+                      fontSize: 24,
                       color: Colors.white,
                     ),
                   ),
@@ -111,7 +106,7 @@ class _DashBoardState extends State<FoodDetails> {
                   height: 20,
                 ),
 
-                 Padding(
+                Padding(
                   padding: EdgeInsets.only(left: 16, right: 16, bottom: 32),
                   child: Card(
 
@@ -128,7 +123,7 @@ class _DashBoardState extends State<FoodDetails> {
 
 
                     child: Container(
-                      margin: EdgeInsets.only(top: 5),
+                      margin: EdgeInsets.only(top: 12),
                       child: Padding(
                         padding: const EdgeInsets.all(12.0),
                         child: Text(

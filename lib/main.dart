@@ -9,9 +9,10 @@ import 'fooddetails.dart';
 void main() {
   runApp(const MyApp());
 
-  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+  SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(
     systemNavigationBarColor: Colors.blue, // navigation bar color
-    statusBarColor: Color(0xff5869ff), // status bar color
+    statusBarColor: Color(0x1F1E1EFF), // status bar color
   ));
 
 }
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData.light(),
+      theme: ThemeData.dark(),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }

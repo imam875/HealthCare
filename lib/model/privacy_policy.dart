@@ -16,26 +16,26 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
       child: Scaffold(
         backgroundColor: Colors.grey,
         appBar: AppBar(
-          title: Center(child: Text("Privacy Policy",style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),)),
-          backgroundColor: Colors.blueAccent,
+          title: Text("Privacy Policy",style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),),
+          backgroundColor: Colors.blueGrey,
         ),
         body: ListView(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Card(
-                color: Colors.white,
-                elevation: 10,
-                shape: OutlineInputBorder(
-                  borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(25),
-                      topLeft: Radius.circular(20),
-                      bottomRight: Radius.circular(20),
-                      bottomLeft: Radius.circular(20)),
-                  borderSide: BorderSide(color: Colors.white),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+            Card(
+              color: Colors.black26,
+              elevation: 10,
+              shape: OutlineInputBorder(
+                borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(25),
+                    topLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20),
+                    bottomLeft: Radius.circular(20)),
+                borderSide: BorderSide(color: Colors.white),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: Container(
+                  margin: EdgeInsets.only(left: 5,top: 5,bottom: 5),
                   child: Column(
                     mainAxisAlignment:
                     MainAxisAlignment.start,
@@ -125,7 +125,7 @@ class _PrivacyPolicyState extends State<PrivacyPolicy> {
               Navigator.push(context, MaterialPageRoute(builder: (context)=>TermsConditions()));
             },
               child: Text("Terms & Conditions",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
-              color: Colors.blueAccent,
+              color: Colors.blueGrey,
             )
           ],
         ),
