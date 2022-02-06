@@ -653,8 +653,7 @@ class _PopupMenuContentState extends State<PopupMenuContent>
 
                             ///Exit.............
                             Container(
-                              color: Colors.black12,
-                              width: 80,
+
                               child: GestureDetector(
                                 onTap: () {
                                   if (Platform.isAndroid) {
@@ -669,21 +668,20 @@ class _PopupMenuContentState extends State<PopupMenuContent>
                                     Container(
                                       padding: const EdgeInsets.all(6),
                                       decoration: BoxDecoration(
-                                        color: const Color(0xFFA9D2AC),
+                                        color: Colors.greenAccent,
                                         borderRadius: BorderRadius.circular(24),
                                       ),
                                       child: const Icon(
                                         Icons.exit_to_app_outlined,
-                                        color: Color(0xFF030303),
+                                        color: Colors.white,
                                       ),
                                     ),
-                                  /*  const SizedBox(
+                                    const SizedBox(
                                       width: 12,
-                                    ),*/
+                                    ),
                                     Text(
                                       "Exit",
-                                      style: TextStyle(
-                                          color: Colors.black.withOpacity(.8),
+                                      style: TextStyle(color: Colors.black.withOpacity(.7),
                                           fontSize: 18,
                                           fontWeight: FontWeight.w600),
                                     ),
@@ -692,7 +690,7 @@ class _PopupMenuContentState extends State<PopupMenuContent>
                               ),
                             ), //Chat box
                             const SizedBox(
-                              height: 32,
+                              height: 10,
                             ),
 
 
