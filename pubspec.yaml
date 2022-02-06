@@ -114,6 +114,26 @@ flutter:
     - assets/11.hihgpreser.jpg
     - assets/12.mirigi.jpg
     - assets/13.duschinta.jpg
+    - assets/1.tholpat.jpg
+    - assets/2.chibuk.jpg
+    - assets/3.biyate.jpg
+    - assets/4.cycle.jpeg
+    - assets/5.joqbayam.jpg
+    - assets/6.gum.png
+    - assets/7.rokprotiroth.jpg
+    - assets/8.kalori.jpg
+    - assets/9.chul.jpg
+    - assets/10.fusfus.jpg
+    - assets/11.payerpata.jpg
+    - assets/12.manusik chap.jpg
+    - assets/13.brain boosting.jpg
+    - assets/14.Cropse Pose.jpg
+    - assets/15.Headstand Pose.jpg
+    - assets/16.Bow Pose and Techniques.jpg
+    - assets/17.Janushirasana or seated head to knee.jpg
+    - assets/18.Full camel pose.jpg
+    - assets/19.sorirchorcha.jpg
+    - assets/20.Hand to foot pose.jpg
     - assets/logo.jpeg
     - assets/food_image_s.jpg
     - assets/food.png
@@ -122,6 +142,7 @@ flutter:
     - assets/starthome.jpg
     - jsondata/foodinfo.json
     - jsondata/healthinfo.json
+    - jsondata/gyminfo.json
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
