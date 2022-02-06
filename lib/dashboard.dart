@@ -771,7 +771,7 @@ class _PopupMenuContentState extends State<PopupMenuContent>
 
                             ///getHelp...........
                             GestureDetector(
-                              onTap: () => _closePopup("getHelp"),
+                              onTap: () {},
                               child: Container(
                                 width: double.maxFinite,
                                 height: 150,

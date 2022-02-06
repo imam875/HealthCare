@@ -71,7 +71,7 @@ class _AboutUsState extends State<AboutUs> {
                               topLeft: Radius.circular(20),
                               bottomRight: Radius.circular(20),
                               bottomLeft: Radius.circular(20)),
-                          borderSide: BorderSide(color: Colors.white),
+                          borderSide: BorderSide(color: Colors.blueAccent),
                         ),
                       ),
                     ),
@@ -130,7 +130,7 @@ class _AboutUsState extends State<AboutUs> {
                                           Text("Md Al-Amin Mia", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
-                                          Text("AI Designation", style: TextStyle(
+                                          Text("Mentor", style: TextStyle(
                                               fontSize: 20,
                                               color: Colors.black45,
                                               fontStyle: FontStyle.italic),),
@@ -251,7 +251,7 @@ class _AboutUsState extends State<AboutUs> {
                                           Text("Zihadul Islam", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
-                                          Text("AI Designation", style: TextStyle(
+                                          Text("ID: A3-1861", style: TextStyle(
                                               fontSize: 20,
                                               color: Colors.black45,
                                               fontStyle: FontStyle.italic),),
@@ -369,7 +369,7 @@ class _AboutUsState extends State<AboutUs> {
                                           Text("Hm Imam Hossen", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
-                                          Text("AI Designation", style: TextStyle(
+                                          Text("ID: A3-1862", style: TextStyle(
                                               fontSize: 20,
                                               color: Colors.black45,
                                               fontStyle: FontStyle.italic),),
@@ -488,7 +488,7 @@ class _AboutUsState extends State<AboutUs> {
                                           Text("Nurunnobe", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
-                                          Text("AI Designation", style: TextStyle(
+                                          Text("ID: A3-1870", style: TextStyle(
                                               fontSize: 20,
                                               color: Colors.black45,
                                               fontStyle: FontStyle.italic),),
@@ -606,7 +606,7 @@ class _AboutUsState extends State<AboutUs> {
                                           Text("Rasel Hassan", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
-                                          Text("AI Designation", style: TextStyle(
+                                          Text("ID: A3-1869", style: TextStyle(
                                               fontSize: 20,
                                               color: Colors.black45,
                                               fontStyle: FontStyle.italic),),
@@ -630,7 +630,7 @@ class _AboutUsState extends State<AboutUs> {
                                                   child: IconButton(
                                                     onPressed: (
                                                         ){
-                                                      _launchInWebViewOrVC("https://www.facebook.com/imamhossen983");
+                                                      _launchInWebViewOrVC("https://www.facebook.com/raselhassan420");
                                                     },
                                                     icon: FaIcon(FontAwesomeIcons.facebook,
                                                     ),
@@ -646,7 +646,7 @@ class _AboutUsState extends State<AboutUs> {
                                                   child: IconButton(
                                                     onPressed: (){
                                                       launch(
-                                                          "mailto:mdalamincse6615@gmail.com?subjectimamhossen983@");
+                                                          "mailto:raselhassan711@gmail.com?subjectimamhossen983@");
                                                     },
 
                                                     icon:  FaIcon(FontAwesomeIcons.envelope),
@@ -661,7 +661,7 @@ class _AboutUsState extends State<AboutUs> {
                                                   width: 60,
                                                   child: IconButton(
                                                     onPressed: (){
-                                                      _launchInWebViewOrVC("https://www.linkedin.com/in/imam-hossen-16a380199");
+                                                      _launchInWebViewOrVC("https://www.linkedin.com/in/rasel-hassan-239a69229");
                                                     },
                                                     icon: FaIcon(FontAwesomeIcons.linkedin),
                                                   ),
@@ -675,7 +675,7 @@ class _AboutUsState extends State<AboutUs> {
                                                   width: 60,
                                                   child: IconButton(
                                                     onPressed: (){
-                                                      _launchInWebViewOrVC("https://github.com/Imam875");
+                                                      _launchInWebViewOrVC("https://github.com/Rasel-Hassan");
                                                     },
                                                     icon: FaIcon(FontAwesomeIcons.github),
                                                   ),
@@ -724,7 +724,7 @@ class _AboutUsState extends State<AboutUs> {
                                           Text("Sharif Ullah Zisan", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
-                                          Text("AI Designation", style: TextStyle(
+                                          Text("ID: A3-1873", style: TextStyle(
                                               fontSize: 20,
                                               color: Colors.black45,
                                               fontStyle: FontStyle.italic),),
@@ -842,7 +842,7 @@ class _AboutUsState extends State<AboutUs> {
                                           Text("Md Ishak", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
-                                          Text("AI Designation", style: TextStyle(
+                                          Text("ID: A3-1865", style: TextStyle(
                                               fontSize: 20,
                                               color: Colors.black45,
                                               fontStyle: FontStyle.italic),),
@@ -960,7 +960,7 @@ class _AboutUsState extends State<AboutUs> {
                                           Text("Senhasish", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
-                                          Text("AI Designation", style: TextStyle(
+                                          Text("ID: A3-1875", style: TextStyle(
                                               fontSize: 20,
                                               color: Colors.black45,
                                               fontStyle: FontStyle.italic),),
@@ -984,7 +984,7 @@ class _AboutUsState extends State<AboutUs> {
                                                   child: IconButton(
                                                     onPressed: (
                                                         ){
-                                                      _launchInWebViewOrVC("https://www.facebook.com/imamhossen983");
+                                                      _launchInWebViewOrVC("https://www.facebook.com/senha.420");
                                                     },
                                                     icon: FaIcon(FontAwesomeIcons.facebook,
                                                     ),
@@ -1000,7 +1000,7 @@ class _AboutUsState extends State<AboutUs> {
                                                   child: IconButton(
                                                     onPressed: (){
                                                       launch(
-                                                          "mailto:mdalamincse6615@gmail.com?subjectimamhossen983@");
+                                                          "mailto:nonstopgeregere790@gmail.com?subjectnonstopgeregere790@");
                                                     },
 
                                                     icon:  FaIcon(FontAwesomeIcons.envelope),
@@ -1015,7 +1015,7 @@ class _AboutUsState extends State<AboutUs> {
                                                   width: 60,
                                                   child: IconButton(
                                                     onPressed: (){
-                                                      _launchInWebViewOrVC("https://www.linkedin.com/in/imam-hossen-16a380199");
+                                                      _launchInWebViewOrVC("https://www.linkedin.com/in/");
                                                     },
                                                     icon: FaIcon(FontAwesomeIcons.linkedin),
                                                   ),
@@ -1029,7 +1029,7 @@ class _AboutUsState extends State<AboutUs> {
                                                   width: 60,
                                                   child: IconButton(
                                                     onPressed: (){
-                                                      _launchInWebViewOrVC("https://github.com/Imam875");
+                                                      _launchInWebViewOrVC("https://github.com/SENHASISH");
                                                     },
                                                     icon: FaIcon(FontAwesomeIcons.github),
                                                   ),
@@ -1078,7 +1078,7 @@ class _AboutUsState extends State<AboutUs> {
                                           Text("Shahrear Tomal", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
-                                          Text("AI Designation", style: TextStyle(
+                                          Text("ID: A3-1863", style: TextStyle(
                                               fontSize: 20,
                                               color: Colors.black45,
                                               fontStyle: FontStyle.italic),),
@@ -1102,7 +1102,7 @@ class _AboutUsState extends State<AboutUs> {
                                                   child: IconButton(
                                                     onPressed: (
                                                         ){
-                                                      _launchInWebViewOrVC("https://www.facebook.com/imamhossen983");
+                                                      _launchInWebViewOrVC("https://www.facebook.com/tomal.ahmed.5682944");
                                                     },
                                                     icon: FaIcon(FontAwesomeIcons.facebook,
                                                     ),
@@ -1118,7 +1118,7 @@ class _AboutUsState extends State<AboutUs> {
                                                   child: IconButton(
                                                     onPressed: (){
                                                       launch(
-                                                          "mailto:mdalamincse6615@gmail.com?subjectimamhossen983@");
+                                                          "mailto:shahreartomal@gmail.com?subjectimamhossen983@");
                                                     },
 
                                                     icon:  FaIcon(FontAwesomeIcons.envelope),
@@ -1133,7 +1133,7 @@ class _AboutUsState extends State<AboutUs> {
                                                   width: 60,
                                                   child: IconButton(
                                                     onPressed: (){
-                                                      _launchInWebViewOrVC("https://www.linkedin.com/in/imam-hossen-16a380199");
+                                                      _launchInWebViewOrVC("https://www.linkedin.com/in/");
                                                     },
                                                     icon: FaIcon(FontAwesomeIcons.linkedin),
                                                   ),
@@ -1147,7 +1147,7 @@ class _AboutUsState extends State<AboutUs> {
                                                   width: 60,
                                                   child: IconButton(
                                                     onPressed: (){
-                                                      _launchInWebViewOrVC("https://github.com/Imam875");
+                                                      _launchInWebViewOrVC("https://github.com/");
                                                     },
                                                     icon: FaIcon(FontAwesomeIcons.github),
                                                   ),
@@ -1196,7 +1196,7 @@ class _AboutUsState extends State<AboutUs> {
                                           Text("Mithun Mandal", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
-                                          Text("AI Designation", style: TextStyle(
+                                          Text("ID: A3-1864", style: TextStyle(
                                               fontSize: 20,
                                               color: Colors.black45,
                                               fontStyle: FontStyle.italic),),
