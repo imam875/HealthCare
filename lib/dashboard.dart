@@ -784,22 +784,8 @@ class _PopupMenuContentState extends State<PopupMenuContent>
                                 child: Center(
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
-                                    children: const [
-                                      Icon(
-                                        Icons.messenger_outline_rounded,
-                                        color: Color(0xff1e93ad),
-                                        size: 44,
-                                      ),
-                                      SizedBox(
-                                        height: 4,
-                                      ),
-                                      Text(
-                                        "Get Help",
-                                        style: TextStyle(
-                                            color: Color(0xff1e93ad),
-                                            fontSize: 18,
-                                            fontWeight: FontWeight.w600),
-                                      ),
+                                    children: [
+                                      Center(child: Image.asset("assets/logo.png", height: MediaQuery.of(context).size.height*.12,)),
                                     ],
                                   ),
                                 ),
