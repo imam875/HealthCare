@@ -5,12 +5,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_share/flutter_share.dart';
 import 'package:healthpro/data/fooddata.dart';
+import 'package:healthpro/data/gymdata.dart';
 import 'package:healthpro/data/healthdata.dart';
-import 'package:healthpro/fooddetails.dart';
+import 'package:healthpro/food_&_gymlist.dart';
 import 'package:healthpro/healthdetails.dart';
 import 'package:healthpro/model/about_us.dart';
 import 'package:healthpro/model/foodmodel.dart';
+import 'package:healthpro/model/gymmodel.dart';
 import 'package:healthpro/model/healthmodel.dart';
 import 'package:healthpro/model/privacy_policy.dart';
 
@@ -59,27 +62,33 @@ class _DashBoardState extends State<DashBoard> {
           ),
         ),
 
-        body: Column(
+        body: ListView(
           children: [
             Container(
                 width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height*.84 ,
+                height: MediaQuery.of(context).size.height,
+
                 child: Column(
                     children: [
-                      SizedBox(height: 150,),
-                  //abouat text section.................
+
+
+
+
+                  ///abouat text Category section.................
                   Container(
 
                     alignment: Alignment.topCenter,
-                    margin: EdgeInsets.only(top:10,),
 
                     width: MediaQuery.of(context).size.width,
-                      child: Text(
-                        "বিভিন্ন খাবারের উপকারিতা",
-                        style: TextStyle(fontSize: 22,wordSpacing:.8,fontWeight: FontWeight.bold),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          "বিভিন্ন খাবারের উপকারিতা",
+                          style: TextStyle(fontSize: 22,wordSpacing:.8,fontWeight: FontWeight.bold),
+                        ),
                       )),
 
-                  //Category section food..............
+                  ///Category section food..............
                   FutureBuilder(
                       future: foodfunction(),
                       builder: (context, imam) {
@@ -208,7 +217,147 @@ class _DashBoardState extends State<DashBoard> {
                         }
                       }),
 
-                  // about text section.................
+                  ///abouat Text gym section.................
+                  Container(
+
+                      alignment: Alignment.topCenter,
+                      margin: EdgeInsets.only(top:10,),
+
+                      width: MediaQuery.of(context).size.width,
+                      child: Text(
+                        "শরীরচর্চা",
+                        style: TextStyle(fontSize: 22,wordSpacing:.8,fontWeight: FontWeight.bold),
+                      )),
+
+                  ///category gym section......................
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Container(
+                      width: MediaQuery.of(context).size.width*.9,
+                      height: MediaQuery.of(context).size.height*.25,
+
+
+                      decoration: BoxDecoration(border: Border.all(color: Colors.blue),
+                      borderRadius: BorderRadius.circular(25)
+                      ),
+                      child: FutureBuilder(
+                          future: gymfunction(),
+                          builder: (context, imam) {
+                            if (imam.hasError) {
+                              return Center(
+                                child: Container(
+                                  child: Text("Loading........."),
+                                ),
+                              );
+                            } else if (imam.hasData) {
+                              var Hossen = imam.data as List<gymmodel>;
+                              return Padding(
+                                padding: const EdgeInsets.only(bottom:15),
+                                child: Container(
+                                  height: MediaQuery.of(context).size.height*.24,
+                                  width: MediaQuery.of(context).size.width,
+                                  child: ListView.builder(
+                                      scrollDirection: Axis.vertical,
+                                      itemCount: Hossen.length,
+                                      itemBuilder: (context, index) {
+                                        return InkWell(
+                                          child: Card(
+                                            shape: OutlineInputBorder(
+                                                borderRadius:
+                                                BorderRadius.circular(25),
+                                                borderSide: const BorderSide(
+                                                    color: Colors.white)),
+                                            elevation: 15,
+                                            child: Container(
+                                              height: MediaQuery.of(context)
+                                                  .size
+                                                  .height*.24,
+                                              width: MediaQuery.of(context)
+                                                  .size
+                                                  .width *
+                                                  .9,
+                                              child: Column(
+                                                mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                                crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                                children: [
+                                                  Container(
+                                                    height: 130,
+                                                    width: MediaQuery.of(context)
+                                                        .size
+                                                        .width,
+                                                    child: ClipRRect(
+                                                      child: Image.asset(
+                                                        Hossen[index]
+                                                            .image
+                                                            .toString(),
+                                                        fit: BoxFit.cover,
+                                                      ),
+                                                      borderRadius:
+                                                      BorderRadius.circular(25),
+                                                    ),
+                                                  ),
+                                                  Padding(
+                                                    padding: const EdgeInsets.only(
+                                                        left: 15.0, top: 5),
+                                                    child: Text(
+                                                        Hossen[index]
+                                                            .name
+                                                            .toString(),
+                                                        textAlign: TextAlign.left,
+                                                        style: const TextStyle(
+                                                            fontSize: 21,
+                                                            fontWeight:
+                                                            FontWeight.bold)),
+                                                  ),
+
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                          onTap: () {
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (Contex) =>
+                                                        FoodDetails(
+                                                          Hossen[index]
+                                                              .name
+                                                              .toString(),
+                                                          Hossen[index]
+                                                              .title
+                                                              .toString(),
+                                                          Hossen[index]
+                                                              .subtitle
+                                                              .toString(),
+                                                          Hossen[index]
+                                                              .category
+                                                              .toString(),
+                                                          Hossen[index]
+                                                              .description
+                                                              .toString(),
+                                                          Hossen[index]
+                                                              .image
+                                                              .toString(),
+                                                        )));
+                                          },
+                                        );
+                                      }),
+                                ),
+                              );
+                            } else {
+                              return Center(
+                                child: Container(
+                                  child: Text("Loading........."),
+                                ),
+                              );
+                            }
+                          }),
+                    ),
+                  ),
+
+                  ///about text Slider section.................
                   Container(
                     alignment: Alignment.topCenter,
 
@@ -216,13 +365,13 @@ class _DashBoardState extends State<DashBoard> {
                     child: Text(
                       "শরীরের যত্ন",
                       style: TextStyle(
-                          fontSize: 24, fontWeight: FontWeight.bold),
+                          fontSize: 22, fontWeight: FontWeight.bold),
                     ),
                   ),
 
-                  //Slider section......................
+                  ///Slider section......................
                   Container(
-                      height: MediaQuery.of(context).size.height *.24,
+                      height: MediaQuery.of(context).size.height *.22,
                       child: FutureBuilder(
                           future: healthfunction(),
                           builder: (context, info) {
@@ -278,7 +427,7 @@ class _DashBoardState extends State<DashBoard> {
                                                           .start,
                                                   children: [
                                                     Container(
-                                                      height: 130,
+                                                      height: 120,
                                                       width: MediaQuery.of(
                                                                   context)
                                                               .size
@@ -312,7 +461,7 @@ class _DashBoardState extends State<DashBoard> {
                                                                 TextAlign
                                                                     .left,
                                                             style: const TextStyle(
-                                                                fontSize: 24,
+                                                                fontSize: 22,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .bold,)),
@@ -367,7 +516,11 @@ class _DashBoardState extends State<DashBoard> {
                                 ),
                               );
                             }
-                          }))
+                          })),
+
+
+
+
                 ]))
           ],
         ));
@@ -617,7 +770,9 @@ class _PopupMenuContentState extends State<PopupMenuContent>
 
                             ///Share Now.........
                             GestureDetector(
-                              onTap: () {},
+                              onTap: () {
+                                share();
+                              },
                               child: Row(
                                 children: [
                                   Container(
@@ -645,7 +800,7 @@ class _PopupMenuContentState extends State<PopupMenuContent>
                               ),
                             ),
                             const SizedBox(
-                              height: 16,
+                              height: 10,
                             ),
 
 
@@ -653,42 +808,60 @@ class _PopupMenuContentState extends State<PopupMenuContent>
 
                             ///Exit.............
                             Container(
-
-                              child: GestureDetector(
-                                onTap: () {
-                                  if (Platform.isAndroid) {
-                                    SystemNavigator.pop();
-                                  } else {
-                                    exit(0);
-                                  }
-                                },
-                                child: Row(
-
-                                  children: [
-                                    Container(
-                                      padding: const EdgeInsets.all(6),
-                                      decoration: BoxDecoration(
-                                        color: Colors.greenAccent,
-                                        borderRadius: BorderRadius.circular(24),
-                                      ),
-                                      child: const Icon(
-                                        Icons.exit_to_app_outlined,
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      width: 12,
-                                    ),
-                                    Text(
-                                      "Exit",
-                                      style: TextStyle(color: Colors.black.withOpacity(.7),
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w600),
-                                    ),
-                                  ],
+                              height: MediaQuery.of(context).size.height*.06,
+                              width: MediaQuery.of(context).size.width,
+                              child: ListTile(
+                                title:Text(
+                                  "Exit",
+                                  style: TextStyle(color: Colors.black.withOpacity(.7),
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w600),
                                 ),
+                                leading: Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.greenAccent,
+                                    borderRadius: BorderRadius.circular(24),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all( 8),
+                                    child: Icon(
+                                      Icons.exit_to_app_outlined,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                                onTap: () {
+                                 showDialog(
+                                     context: context,
+                                     builder: (context){
+                                       return Container(
+                                         child: AlertDialog(
+                                           title: Text("Exit from স্বাস্থ্য সেবা"),
+                                           content: Text("Are you sure want to exit"),
+                                           actions: [
+                                             FlatButton(
+                                               onPressed: (){
+                                                 Navigator.pop(context);
+                                               },
+                                               child: Text("No",style: TextStyle(fontSize: 20)),
+                                             ),
+                                             FlatButton(
+                                               onPressed: (){
+                                                 exit(0);
+                                               },
+                                               child: Text("Ok",style: TextStyle(fontSize: 20),),
+                                             ),
+                                           ],
+                                         ),
+                                       );
+                                     }
+                                 );
+                                },
+
                               ),
-                            ), //Chat box
+                            ),
+                            //Chat box
+
                             const SizedBox(
                               height: 10,
                             ),
@@ -751,5 +924,14 @@ class _PopupMenuContentState extends State<PopupMenuContent>
 
       if (action.isNotEmpty) widget.onAction?.call(action);
     });
+  }
+
+  Future<void> share() async {
+    await FlutterShare.share(
+        title: 'Change your Lifestyle',
+        text: 'আপনি কি স্বাস্থ্য ঝুঁকিতে আছেন',
+        linkUrl: 'https://play.google.com/store/apps/details?id=com.eightynine.healthpro',
+        chooserTitle: 'Example Chooser Title'
+    );
   }
 }

@@ -3,6 +3,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:email_launcher/email_launcher.dart';
 
 
 class AboutUs extends StatefulWidget {
@@ -32,37 +35,6 @@ class _AboutUsState extends State<AboutUs> {
           children: [
             Column(
               children: [
-              /*  Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Center(
-                    child: Container(
-                      height: MediaQuery.of(context).size.height*.08,
-                      width: MediaQuery
-                          .of(context)
-                          .size
-                          .width * 0.95,
-                      child: Card(
-                        child: Row(children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Icon(Icons.arrow_back, size: 30,),
-                          ),
-                          SizedBox(width: 35,),
-
-                        ],),
-                        elevation: 10,
-                        shape: OutlineInputBorder(
-                          borderRadius: BorderRadius.only(
-                              topRight: Radius.circular(25),
-                              topLeft: Radius.circular(20),
-                              bottomRight: Radius.circular(20),
-                              bottomLeft: Radius.circular(20)),
-                          borderSide: BorderSide(color: Colors.white),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),*/
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Center(
@@ -122,8 +94,129 @@ class _AboutUsState extends State<AboutUs> {
                             crossAxisAlignment:
                             CrossAxisAlignment.start,
                             children: [
+                              Text("Mentor Of স্বাস্থ্য সেবা",
+                            style: TextStyle(fontSize: 31, fontWeight: FontWeight.bold),),
+                              Center(
+                                child: Container(
+                                  height: MediaQuery.of(context).size.height*.48,
+                                  width: MediaQuery
+                                      .of(context)
+                                      .size
+                                      .width * .82,
+                                  child: Card(
+                                    elevation: 10,
+                                    shape: OutlineInputBorder(
+                                      borderRadius: BorderRadius.only(
+                                          topRight: Radius.circular(20),
+                                          topLeft: Radius.circular(20),
+                                          bottomRight: Radius.circular(20),
+                                          bottomLeft: Radius.circular(20)),
+                                      borderSide: BorderSide(color: Colors.blue),
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(18.0),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                        MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                        children: [
+                                          CircleAvatar(
+                                            backgroundImage: AssetImage(
+                                                "assets/Mentor.jpg"),
+                                            maxRadius: 50,
+                                          ),
+                                          SizedBox(height: 15,),
+                                          Text("Md Al-Amin Mia", style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 30),),
+                                          Text("AI Designation", style: TextStyle(
+                                              fontSize: 20,
+                                              color: Colors.black45,
+                                              fontStyle: FontStyle.italic),),
+                                          SizedBox(height: 15,),
+                                          Text("Flutter Developer",
+                                            style: TextStyle(fontSize: 25,
+                                                color: Colors.black),),
+                                          Container(
+                                            alignment: Alignment.bottomLeft,
+                                            height: 75,
+                                            child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                              children: [
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.blue,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (
+                                                        ){
+                                                      _launchInWebViewOrVC("https://www.facebook.com/alamincse6615");
+                                                    },
+                                                    icon: FaIcon(FontAwesomeIcons.facebook,
+                                                    ),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.red,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      launch(
+                                                          "mailto:mdalamincse6615@gmail.com?subjectimamhossen983@");
+                                                    },
+
+                                                    icon:  FaIcon(FontAwesomeIcons.envelope),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.blue,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      _launchInWebViewOrVC("https://bd.linkedin.com/in/alamincse6615");
+                                                    },
+                                                    icon: FaIcon(FontAwesomeIcons.linkedin),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.grey,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      _launchInWebViewOrVC("https://github.com/alamincse6615");
+                                                    },
+                                                    icon: FaIcon(FontAwesomeIcons.github),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          )
+
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+
                               Text("Active Developers",
-                                style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),),
+                              style: TextStyle(fontSize: 33, fontWeight: FontWeight.bold),),
                               Center(
                                 child: Container(
                                   height: MediaQuery.of(context).size.height*.45,
@@ -212,7 +305,7 @@ class _AboutUsState extends State<AboutUs> {
                               SizedBox(height: 20,),
                               Center(
                                 child: Container(
-                                  height: MediaQuery.of(context).size.height*.45,
+                                  height: MediaQuery.of(context).size.height*.48,
                                   width: MediaQuery
                                       .of(context)
                                       .size
@@ -225,7 +318,7 @@ class _AboutUsState extends State<AboutUs> {
                                           topLeft: Radius.circular(20),
                                           bottomRight: Radius.circular(20),
                                           bottomLeft: Radius.circular(20)),
-                                      borderSide: BorderSide(color: Colors.white),
+                                      borderSide: BorderSide(color: Colors.blue),
                                     ),
                                     child: Padding(
                                       padding: const EdgeInsets.all(18.0),
@@ -241,7 +334,7 @@ class _AboutUsState extends State<AboutUs> {
                                             maxRadius: 50,
                                           ),
                                           SizedBox(height: 15,),
-                                          Text("HM Imam Hossen", style: TextStyle(
+                                          Text("Hm Imam Hossen", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
                                           Text("AI Designation", style: TextStyle(
@@ -252,43 +345,76 @@ class _AboutUsState extends State<AboutUs> {
                                           Text("Flutter Developer",
                                             style: TextStyle(fontSize: 25,
                                                 color: Colors.black),),
-                                          Padding(
-                                            padding: const EdgeInsets.all(8.0),
+                                          Container(
+                                            alignment: Alignment.bottomLeft,
+                                            height: 75,
                                             child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                                               children: [
-                                                InkWell(
-                                                  onTap: (){
-
-                                                  },
-                                                  child: Icon(
-                                                    (Icons.facebook), size: 50,
-                                                    color: Colors.blueAccent,),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.blue,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (
+                                                        ){
+                                                      _launchInWebViewOrVC("https://www.facebook.com/imamhossen983");
+                                                    },
+                                                    icon: FaIcon(FontAwesomeIcons.facebook,
+                                                    ),
+                                                  ),
                                                 ),
-                                                SizedBox(width: 10,),
-                                                InkWell(
-                                                    onTap: () {
-
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.red,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      launch(
+                                                          "mailto:mdalamincse6615@gmail.com?subjectimamhossen983@");
                                                     },
-                                                    child: Icon(
-                                                      (Icons.mail), size: 50,
-                                                      color: Colors.red,)),
-                                                SizedBox(width: 10,),
-                                                InkWell(
-                                                    onTap: () {
 
+                                                    icon:  FaIcon(FontAwesomeIcons.envelope),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.blue,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      _launchInWebViewOrVC("https://www.linkedin.com/in/imam-hossen-16a380199");
                                                     },
-                                                    child: Icon(
-                                                      (Icons.mail), size: 50,)),
-                                                SizedBox(width: 10,),
-                                                InkWell(
-                                                  onTap: (){
-                                                  },
-                                                  child: Icon(
-                                                    (Icons.mail), size: 50,),
+                                                    icon: FaIcon(FontAwesomeIcons.linkedin),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.grey,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      _launchInWebViewOrVC("https://github.com/Imam875");
+                                                    },
+                                                    icon: FaIcon(FontAwesomeIcons.github),
+                                                  ),
                                                 ),
                                               ],
                                             ),
                                           )
+
                                         ],
                                       ),
                                     ),
@@ -920,6 +1046,19 @@ class _AboutUsState extends State<AboutUs> {
         ),
       ),
     );
+  }
+
+
+
+  Future<void> _launchInWebViewOrVC(String url) async {
+    if (!await launch(
+      url,
+      forceSafariVC: true,
+      forceWebView: true,
+      headers: <String, String>{'my_header_key': 'my_header_value'},
+    )) {
+      throw 'Could not launch $url';
+    }
   }
 
 }

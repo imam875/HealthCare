@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:healthpro/dashboard.dart';
 
-import 'fooddetails.dart';
+import 'food_&_gymlist.dart';
 
 void main() {
   runApp(const MyApp());
 
   SystemChrome.setSystemUIOverlayStyle(
       SystemUiOverlayStyle(
-    systemNavigationBarColor: Colors.blue, // navigation bar color
+    systemNavigationBarColor: Colors.transparent, // navigation bar color
     statusBarColor: Color(0x1F1E1EFF), // status bar color
   ));
 
