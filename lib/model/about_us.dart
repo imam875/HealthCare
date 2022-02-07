@@ -232,7 +232,7 @@ class _AboutUsState extends State<AboutUs> {
                                           topLeft: Radius.circular(20),
                                           bottomRight: Radius.circular(20),
                                           bottomLeft: Radius.circular(20)),
-                                      borderSide: BorderSide(color: Colors.white),
+                                      borderSide: BorderSide(color: Colors.blue),
                                     ),
                                     child: Padding(
                                       padding: const EdgeInsets.all(18.0),
@@ -259,39 +259,71 @@ class _AboutUsState extends State<AboutUs> {
                                           Text("Flutter Developer",
                                             style: TextStyle(fontSize: 25,
                                                 color: Colors.black),),
-                                          Padding(
-                                            padding: const EdgeInsets.all(8.0),
+                                          Container(
+                                            alignment: Alignment.bottomLeft,
+                                            height: 75,
                                             child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                                               children: [
-                                                InkWell(
-                                                  onTap: (){
-
-                                                  },
-                                                  child: Icon(
-                                                    (Icons.facebook), size: 50,
-                                                    color: Colors.blueAccent,),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.blue,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (
+                                                        ){
+                                                      _launchInWebViewOrVC("https://www.facebook.com/ZihadulIslam02");
+                                                    },
+                                                    icon: FaIcon(FontAwesomeIcons.facebook,
+                                                    ),
+                                                  ),
                                                 ),
-                                                SizedBox(width: 10,),
-                                                InkWell(
-                                                    onTap: () {
-
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.red,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      launch(
+                                                          "mailto:zihad650top@gmail.com?subjectimamhossen983@");
                                                     },
-                                                    child: Icon(
-                                                      (Icons.mail), size: 50,
-                                                      color: Colors.red,)),
-                                                SizedBox(width: 10,),
-                                                InkWell(
-                                                    onTap: () {
 
+                                                    icon:  FaIcon(FontAwesomeIcons.envelope),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.blue,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      _launchInWebViewOrVC("https://www.linkedin.com/in/marketerzihad");
                                                     },
-                                                    child: Icon(
-                                                      (Icons.mail), size: 50,)),
-                                                SizedBox(width: 10,),
-                                                InkWell(
-                                                  onTap: (){
-                                                  },
-                                                  child: Icon(
-                                                    (Icons.mail), size: 50,),
+                                                    icon: FaIcon(FontAwesomeIcons.linkedin),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.grey,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      _launchInWebViewOrVC("https://github.com/zihad650");
+                                                    },
+                                                    icon: FaIcon(FontAwesomeIcons.github),
+                                                  ),
                                                 ),
                                               ],
                                             ),
@@ -437,7 +469,7 @@ class _AboutUsState extends State<AboutUs> {
                                           topLeft: Radius.circular(20),
                                           bottomRight: Radius.circular(20),
                                           bottomLeft: Radius.circular(20)),
-                                      borderSide: BorderSide(color: Colors.white),
+                                      borderSide: BorderSide(color: Colors.blue),
                                     ),
                                     child: Padding(
                                       padding: const EdgeInsets.all(18.0),
@@ -453,7 +485,7 @@ class _AboutUsState extends State<AboutUs> {
                                             maxRadius: 50,
                                           ),
                                           SizedBox(height: 15,),
-                                          Text("Nurunnobe Jomadder", style: TextStyle(
+                                          Text("Nurunnobe", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
                                           Text("AI Designation", style: TextStyle(
@@ -464,39 +496,71 @@ class _AboutUsState extends State<AboutUs> {
                                           Text("Flutter Developer",
                                             style: TextStyle(fontSize: 25,
                                                 color: Colors.black),),
-                                          Padding(
-                                            padding: const EdgeInsets.all(8.0),
+                                          Container(
+                                            alignment: Alignment.bottomLeft,
+                                            height: 75,
                                             child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                                               children: [
-                                                InkWell(
-                                                  onTap: (){
-
-                                                  },
-                                                  child: Icon(
-                                                    (Icons.facebook), size: 50,
-                                                    color: Colors.blueAccent,),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.blue,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (
+                                                        ){
+                                                      _launchInWebViewOrVC("https://www.facebook.com/nurunnobejisan");
+                                                    },
+                                                    icon: FaIcon(FontAwesomeIcons.facebook,
+                                                    ),
+                                                  ),
                                                 ),
-                                                SizedBox(width: 10,),
-                                                InkWell(
-                                                    onTap: () {
-
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.red,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      launch(
+                                                          "mailto:jisanjomadder@gmail.com?subjectimamhossen983@");
                                                     },
-                                                    child: Icon(
-                                                      (Icons.mail), size: 50,
-                                                      color: Colors.red,)),
-                                                SizedBox(width: 10,),
-                                                InkWell(
-                                                    onTap: () {
 
+                                                    icon:  FaIcon(FontAwesomeIcons.envelope),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.blue,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      _launchInWebViewOrVC("https://www.linkedin.com/in/nurunnobejisan");
                                                     },
-                                                    child: Icon(
-                                                      (Icons.mail), size: 50,)),
-                                                SizedBox(width: 10,),
-                                                InkWell(
-                                                  onTap: (){
-                                                  },
-                                                  child: Icon(
-                                                    (Icons.mail), size: 50,),
+                                                    icon: FaIcon(FontAwesomeIcons.linkedin),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.grey,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      _launchInWebViewOrVC("https://github.com/nurunnobejisan");
+                                                    },
+                                                    icon: FaIcon(FontAwesomeIcons.github),
+                                                  ),
                                                 ),
                                               ],
                                             ),
@@ -523,7 +587,7 @@ class _AboutUsState extends State<AboutUs> {
                                           topLeft: Radius.circular(20),
                                           bottomRight: Radius.circular(20),
                                           bottomLeft: Radius.circular(20)),
-                                      borderSide: BorderSide(color: Colors.white),
+                                      borderSide: BorderSide(color: Colors.blue),
                                     ),
                                     child: Padding(
                                       padding: const EdgeInsets.all(18.0),
@@ -550,39 +614,71 @@ class _AboutUsState extends State<AboutUs> {
                                           Text("Flutter Developer",
                                             style: TextStyle(fontSize: 25,
                                                 color: Colors.black),),
-                                          Padding(
-                                            padding: const EdgeInsets.all(8.0),
+                                          Container(
+                                            alignment: Alignment.bottomLeft,
+                                            height: 75,
                                             child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                                               children: [
-                                                InkWell(
-                                                  onTap: (){
-
-                                                  },
-                                                  child: Icon(
-                                                    (Icons.facebook), size: 50,
-                                                    color: Colors.blueAccent,),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.blue,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (
+                                                        ){
+                                                      _launchInWebViewOrVC("https://www.facebook.com/imamhossen983");
+                                                    },
+                                                    icon: FaIcon(FontAwesomeIcons.facebook,
+                                                    ),
+                                                  ),
                                                 ),
-                                                SizedBox(width: 10,),
-                                                InkWell(
-                                                    onTap: () {
-
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.red,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      launch(
+                                                          "mailto:mdalamincse6615@gmail.com?subjectimamhossen983@");
                                                     },
-                                                    child: Icon(
-                                                      (Icons.mail), size: 50,
-                                                      color: Colors.red,)),
-                                                SizedBox(width: 10,),
-                                                InkWell(
-                                                    onTap: () {
 
+                                                    icon:  FaIcon(FontAwesomeIcons.envelope),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.blue,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      _launchInWebViewOrVC("https://www.linkedin.com/in/imam-hossen-16a380199");
                                                     },
-                                                    child: Icon(
-                                                      (Icons.mail), size: 50,)),
-                                                SizedBox(width: 10,),
-                                                InkWell(
-                                                  onTap: (){
-                                                  },
-                                                  child: Icon(
-                                                    (Icons.mail), size: 50,),
+                                                    icon: FaIcon(FontAwesomeIcons.linkedin),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.grey,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      _launchInWebViewOrVC("https://github.com/Imam875");
+                                                    },
+                                                    icon: FaIcon(FontAwesomeIcons.github),
+                                                  ),
                                                 ),
                                               ],
                                             ),
@@ -609,7 +705,7 @@ class _AboutUsState extends State<AboutUs> {
                                           topLeft: Radius.circular(20),
                                           bottomRight: Radius.circular(20),
                                           bottomLeft: Radius.circular(20)),
-                                      borderSide: BorderSide(color: Colors.white),
+                                      borderSide: BorderSide(color: Colors.blue),
                                     ),
                                     child: Padding(
                                       padding: const EdgeInsets.all(18.0),
@@ -625,7 +721,7 @@ class _AboutUsState extends State<AboutUs> {
                                             maxRadius: 50,
                                           ),
                                           SizedBox(height: 15,),
-                                          Text("Zisan Ahmed", style: TextStyle(
+                                          Text("Sharif Ullah Zisan", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
                                           Text("AI Designation", style: TextStyle(
@@ -636,39 +732,71 @@ class _AboutUsState extends State<AboutUs> {
                                           Text("Flutter Developer",
                                             style: TextStyle(fontSize: 25,
                                                 color: Colors.black),),
-                                          Padding(
-                                            padding: const EdgeInsets.all(8.0),
+                                          Container(
+                                            alignment: Alignment.bottomLeft,
+                                            height: 75,
                                             child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                                               children: [
-                                                InkWell(
-                                                  onTap: (){
-
-                                                  },
-                                                  child: Icon(
-                                                    (Icons.facebook), size: 50,
-                                                    color: Colors.blueAccent,),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.blue,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (
+                                                        ){
+                                                      _launchInWebViewOrVC("https://www.facebook.com/itz.zisan");
+                                                    },
+                                                    icon: FaIcon(FontAwesomeIcons.facebook,
+                                                    ),
+                                                  ),
                                                 ),
-                                                SizedBox(width: 10,),
-                                                InkWell(
-                                                    onTap: () {
-
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.red,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      launch(
+                                                          "mailto:sharifullahzisan@gmail.com?subjectimamhossen983@");
                                                     },
-                                                    child: Icon(
-                                                      (Icons.mail), size: 50,
-                                                      color: Colors.red,)),
-                                                SizedBox(width: 10,),
-                                                InkWell(
-                                                    onTap: () {
 
+                                                    icon:  FaIcon(FontAwesomeIcons.envelope),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.blue,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      _launchInWebViewOrVC("https://www.linkedin.com/in/sharif-ullah-zisan-33778516b");
                                                     },
-                                                    child: Icon(
-                                                      (Icons.mail), size: 50,)),
-                                                SizedBox(width: 10,),
-                                                InkWell(
-                                                  onTap: (){
-                                                  },
-                                                  child: Icon(
-                                                    (Icons.mail), size: 50,),
+                                                    icon: FaIcon(FontAwesomeIcons.linkedin),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.grey,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      _launchInWebViewOrVC("https://github.com/sharifullahzisan");
+                                                    },
+                                                    icon: FaIcon(FontAwesomeIcons.github),
+                                                  ),
                                                 ),
                                               ],
                                             ),
@@ -695,7 +823,7 @@ class _AboutUsState extends State<AboutUs> {
                                           topLeft: Radius.circular(20),
                                           bottomRight: Radius.circular(20),
                                           bottomLeft: Radius.circular(20)),
-                                      borderSide: BorderSide(color: Colors.white),
+                                      borderSide: BorderSide(color: Colors.blue),
                                     ),
                                     child: Padding(
                                       padding: const EdgeInsets.all(18.0),
@@ -722,39 +850,71 @@ class _AboutUsState extends State<AboutUs> {
                                           Text("Flutter Developer",
                                             style: TextStyle(fontSize: 25,
                                                 color: Colors.black),),
-                                          Padding(
-                                            padding: const EdgeInsets.all(8.0),
+                                          Container(
+                                            alignment: Alignment.bottomLeft,
+                                            height: 75,
                                             child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                                               children: [
-                                                InkWell(
-                                                  onTap: (){
-
-                                                  },
-                                                  child: Icon(
-                                                    (Icons.facebook), size: 50,
-                                                    color: Colors.blueAccent,),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.blue,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (
+                                                        ){
+                                                      _launchInWebViewOrVC("https://m.facebook.com/hm.jebon.77");
+                                                    },
+                                                    icon: FaIcon(FontAwesomeIcons.facebook,
+                                                    ),
+                                                  ),
                                                 ),
-                                                SizedBox(width: 10,),
-                                                InkWell(
-                                                    onTap: () {
-
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.red,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      launch(
+                                                          "mailto:rajunhowlader837@gmail.com?subjectimamhossen983@");
                                                     },
-                                                    child: Icon(
-                                                      (Icons.mail), size: 50,
-                                                      color: Colors.red,)),
-                                                SizedBox(width: 10,),
-                                                InkWell(
-                                                    onTap: () {
 
+                                                    icon:  FaIcon(FontAwesomeIcons.envelope),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.blue,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      _launchInWebViewOrVC("https://www.linkedin.com/in/rajun-howlader-20154a230");
                                                     },
-                                                    child: Icon(
-                                                      (Icons.mail), size: 50,)),
-                                                SizedBox(width: 10,),
-                                                InkWell(
-                                                  onTap: (){
-                                                  },
-                                                  child: Icon(
-                                                    (Icons.mail), size: 50,),
+                                                    icon: FaIcon(FontAwesomeIcons.linkedin),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.grey,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      _launchInWebViewOrVC("https://github.com/Mdishak145");
+                                                    },
+                                                    icon: FaIcon(FontAwesomeIcons.github),
+                                                  ),
                                                 ),
                                               ],
                                             ),
@@ -781,7 +941,7 @@ class _AboutUsState extends State<AboutUs> {
                                           topLeft: Radius.circular(20),
                                           bottomRight: Radius.circular(20),
                                           bottomLeft: Radius.circular(20)),
-                                      borderSide: BorderSide(color: Colors.white),
+                                      borderSide: BorderSide(color: Colors.blue),
                                     ),
                                     child: Padding(
                                       padding: const EdgeInsets.all(18.0),
@@ -808,39 +968,71 @@ class _AboutUsState extends State<AboutUs> {
                                           Text("Flutter Developer",
                                             style: TextStyle(fontSize: 25,
                                                 color: Colors.black),),
-                                          Padding(
-                                            padding: const EdgeInsets.all(8.0),
+                                          Container(
+                                            alignment: Alignment.bottomLeft,
+                                            height: 75,
                                             child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                                               children: [
-                                                InkWell(
-                                                  onTap: (){
-
-                                                  },
-                                                  child: Icon(
-                                                    (Icons.facebook), size: 50,
-                                                    color: Colors.blueAccent,),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.blue,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (
+                                                        ){
+                                                      _launchInWebViewOrVC("https://www.facebook.com/imamhossen983");
+                                                    },
+                                                    icon: FaIcon(FontAwesomeIcons.facebook,
+                                                    ),
+                                                  ),
                                                 ),
-                                                SizedBox(width: 10,),
-                                                InkWell(
-                                                    onTap: () {
-
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.red,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      launch(
+                                                          "mailto:mdalamincse6615@gmail.com?subjectimamhossen983@");
                                                     },
-                                                    child: Icon(
-                                                      (Icons.mail), size: 50,
-                                                      color: Colors.red,)),
-                                                SizedBox(width: 10,),
-                                                InkWell(
-                                                    onTap: () {
 
+                                                    icon:  FaIcon(FontAwesomeIcons.envelope),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.blue,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      _launchInWebViewOrVC("https://www.linkedin.com/in/imam-hossen-16a380199");
                                                     },
-                                                    child: Icon(
-                                                      (Icons.mail), size: 50,)),
-                                                SizedBox(width: 10,),
-                                                InkWell(
-                                                  onTap: (){
-                                                  },
-                                                  child: Icon(
-                                                    (Icons.mail), size: 50,),
+                                                    icon: FaIcon(FontAwesomeIcons.linkedin),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.grey,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      _launchInWebViewOrVC("https://github.com/Imam875");
+                                                    },
+                                                    icon: FaIcon(FontAwesomeIcons.github),
+                                                  ),
                                                 ),
                                               ],
                                             ),
@@ -867,7 +1059,7 @@ class _AboutUsState extends State<AboutUs> {
                                           topLeft: Radius.circular(20),
                                           bottomRight: Radius.circular(20),
                                           bottomLeft: Radius.circular(20)),
-                                      borderSide: BorderSide(color: Colors.white),
+                                      borderSide: BorderSide(color: Colors.blue),
                                     ),
                                     child: Padding(
                                       padding: const EdgeInsets.all(18.0),
@@ -894,39 +1086,71 @@ class _AboutUsState extends State<AboutUs> {
                                           Text("Flutter Developer",
                                             style: TextStyle(fontSize: 25,
                                                 color: Colors.black),),
-                                          Padding(
-                                            padding: const EdgeInsets.all(8.0),
+                                          Container(
+                                            alignment: Alignment.bottomLeft,
+                                            height: 75,
                                             child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                                               children: [
-                                                InkWell(
-                                                  onTap: (){
-
-                                                  },
-                                                  child: Icon(
-                                                    (Icons.facebook), size: 50,
-                                                    color: Colors.blueAccent,),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.blue,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (
+                                                        ){
+                                                      _launchInWebViewOrVC("https://www.facebook.com/imamhossen983");
+                                                    },
+                                                    icon: FaIcon(FontAwesomeIcons.facebook,
+                                                    ),
+                                                  ),
                                                 ),
-                                                SizedBox(width: 10,),
-                                                InkWell(
-                                                    onTap: () {
-
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.red,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      launch(
+                                                          "mailto:mdalamincse6615@gmail.com?subjectimamhossen983@");
                                                     },
-                                                    child: Icon(
-                                                      (Icons.mail), size: 50,
-                                                      color: Colors.red,)),
-                                                SizedBox(width: 10,),
-                                                InkWell(
-                                                    onTap: () {
 
+                                                    icon:  FaIcon(FontAwesomeIcons.envelope),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.blue,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      _launchInWebViewOrVC("https://www.linkedin.com/in/imam-hossen-16a380199");
                                                     },
-                                                    child: Icon(
-                                                      (Icons.mail), size: 50,)),
-                                                SizedBox(width: 10,),
-                                                InkWell(
-                                                  onTap: (){
-                                                  },
-                                                  child: Icon(
-                                                    (Icons.mail), size: 50,),
+                                                    icon: FaIcon(FontAwesomeIcons.linkedin),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.grey,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      _launchInWebViewOrVC("https://github.com/Imam875");
+                                                    },
+                                                    icon: FaIcon(FontAwesomeIcons.github),
+                                                  ),
                                                 ),
                                               ],
                                             ),
@@ -953,7 +1177,7 @@ class _AboutUsState extends State<AboutUs> {
                                           topLeft: Radius.circular(20),
                                           bottomRight: Radius.circular(20),
                                           bottomLeft: Radius.circular(20)),
-                                      borderSide: BorderSide(color: Colors.white),
+                                      borderSide: BorderSide(color: Colors.blue),
                                     ),
                                     child: Padding(
                                       padding: const EdgeInsets.all(18.0),
@@ -980,39 +1204,71 @@ class _AboutUsState extends State<AboutUs> {
                                           Text("Flutter Developer",
                                             style: TextStyle(fontSize: 25,
                                                 color: Colors.black),),
-                                          Padding(
-                                            padding: const EdgeInsets.all(8.0),
+                                          Container(
+                                            alignment: Alignment.bottomLeft,
+                                            height: 75,
                                             child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                                               children: [
-                                                InkWell(
-                                                  onTap: (){
-
-                                                  },
-                                                  child: Icon(
-                                                    (Icons.facebook), size: 50,
-                                                    color: Colors.blueAccent,),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.blue,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (
+                                                        ){
+                                                      _launchInWebViewOrVC("https://www.facebook.com/mithunmandal00");
+                                                    },
+                                                    icon: FaIcon(FontAwesomeIcons.facebook,
+                                                    ),
+                                                  ),
                                                 ),
-                                                SizedBox(width: 10,),
-                                                InkWell(
-                                                    onTap: () {
-
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.red,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      launch(
+                                                          "mailto:mail.mithunmandal@gmail.com?subjectimamhossen983@");
                                                     },
-                                                    child: Icon(
-                                                      (Icons.mail), size: 50,
-                                                      color: Colors.red,)),
-                                                SizedBox(width: 10,),
-                                                InkWell(
-                                                    onTap: () {
 
+                                                    icon:  FaIcon(FontAwesomeIcons.envelope),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.blue,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      _launchInWebViewOrVC("https://www.linkedin.com/in/mithun-mandal");
                                                     },
-                                                    child: Icon(
-                                                      (Icons.mail), size: 50,)),
-                                                SizedBox(width: 10,),
-                                                InkWell(
-                                                  onTap: (){
-                                                  },
-                                                  child: Icon(
-                                                    (Icons.mail), size: 50,),
+                                                    icon: FaIcon(FontAwesomeIcons.linkedin),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                      color: Colors.grey,
+                                                      borderRadius: BorderRadius.circular(20)
+                                                  ),
+                                                  height: 40,
+                                                  width: 60,
+                                                  child: IconButton(
+                                                    onPressed: (){
+                                                      _launchInWebViewOrVC("https://github.com/mithunAP");
+                                                    },
+                                                    icon: FaIcon(FontAwesomeIcons.github),
+                                                  ),
                                                 ),
                                               ],
                                             ),
@@ -1032,7 +1288,7 @@ class _AboutUsState extends State<AboutUs> {
                               topLeft: Radius.circular(20),
                               bottomRight: Radius.circular(20),
                               bottomLeft: Radius.circular(20)),
-                          borderSide: BorderSide(color: Colors.white),
+                          borderSide: BorderSide(color: Colors.purple),
                         ),
                       ),
                     ),
