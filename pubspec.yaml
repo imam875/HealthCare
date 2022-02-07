@@ -143,6 +143,7 @@ flutter:
     - assets/vitamin-c-bangla-health-tips.png
     - assets/hilsha fish.png
     - assets/starthome.jpg
+    - assets/exercise.jpg
     - jsondata/foodinfo.json
     - jsondata/healthinfo.json
     - jsondata/gyminfo.json
