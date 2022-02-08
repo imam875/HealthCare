@@ -60,7 +60,7 @@ class _DashBoardState extends State<DashBoard> {
         body: ListView(
           children: [
             Container(
-                width: MediaQuery.of(context).size.width,
+                width: MediaQuery.of(context).size.width*.8,
                 height: MediaQuery.of(context).size.height,
                 child: Column(children: [
                   ///abouat text Category section.................
