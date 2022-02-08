@@ -94,8 +94,10 @@ class _AboutUsState extends State<AboutUs> {
                             crossAxisAlignment:
                             CrossAxisAlignment.start,
                             children: [
+                            /// Mentor of healthpro.......
                               Text("Mentor Of স্বাস্থ্য সেবা",
                             style: TextStyle(fontSize: 31, fontWeight: FontWeight.bold),),
+                            ///Alamin mia.................
                               Center(
                                 child: Container(
                                   height: MediaQuery.of(context).size.height*.48,
@@ -130,9 +132,9 @@ class _AboutUsState extends State<AboutUs> {
                                           Text("Md Al-Amin Mia", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
-                                          Text("AI Designation", style: TextStyle(
+                                          Text("Mentor", style: TextStyle(
                                               fontSize: 20,
-                                              color: Colors.black45,
+                                              color: Colors.blueGrey,
                                               fontStyle: FontStyle.italic),),
                                           SizedBox(height: 15,),
                                           Text("Flutter Developer",
@@ -214,12 +216,13 @@ class _AboutUsState extends State<AboutUs> {
                                   ),
                                 ),
                               ),
-
+                            ///Active Development.........
                               Text("Active Developers",
                               style: TextStyle(fontSize: 33, fontWeight: FontWeight.bold),),
+                            ///zihad......................
                               Center(
                                 child: Container(
-                                  height: MediaQuery.of(context).size.height*.45,
+                                  height: MediaQuery.of(context).size.height*.48,
                                   width: MediaQuery
                                       .of(context)
                                       .size
@@ -251,9 +254,9 @@ class _AboutUsState extends State<AboutUs> {
                                           Text("Zihadul Islam", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
-                                          Text("AI Designation", style: TextStyle(
+                                          Text("Student ID: A3-1861", style: TextStyle(
                                               fontSize: 20,
-                                              color: Colors.black45,
+                                              color: Colors.blueGrey,
                                               fontStyle: FontStyle.italic),),
                                           SizedBox(height: 15,),
                                           Text("Flutter Developer",
@@ -335,6 +338,7 @@ class _AboutUsState extends State<AboutUs> {
                                 ),
                               ),
                               SizedBox(height: 20,),
+                            ///ImamHossen.................
                               Center(
                                 child: Container(
                                   height: MediaQuery.of(context).size.height*.48,
@@ -369,9 +373,9 @@ class _AboutUsState extends State<AboutUs> {
                                           Text("Hm Imam Hossen", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
-                                          Text("AI Designation", style: TextStyle(
+                                          Text("Student ID: A3-1862", style: TextStyle(
                                               fontSize: 20,
-                                              color: Colors.black45,
+                                              color: Colors.blueGrey,
                                               fontStyle: FontStyle.italic),),
                                           SizedBox(height: 15,),
                                           Text("Flutter Developer",
@@ -409,7 +413,7 @@ class _AboutUsState extends State<AboutUs> {
                                                   child: IconButton(
                                                     onPressed: (){
                                                       launch(
-                                                          "mailto:mdalamincse6615@gmail.com?subjectimamhossen983@");
+                                                          "mailto:imamhossen983@gmail.com?subjectimamhossen983@");
                                                     },
 
                                                     icon:  FaIcon(FontAwesomeIcons.envelope),
@@ -454,9 +458,10 @@ class _AboutUsState extends State<AboutUs> {
                                 ),
                               ),
                               SizedBox(height: 20,),
+                            ///Nurunnobe..................
                               Center(
                                 child: Container(
-                                  height: MediaQuery.of(context).size.height*.52,
+                                  height: MediaQuery.of(context).size.height*.48,
                                   width: MediaQuery
                                       .of(context)
                                       .size
@@ -488,9 +493,9 @@ class _AboutUsState extends State<AboutUs> {
                                           Text("Nurunnobe", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
-                                          Text("AI Designation", style: TextStyle(
+                                          Text("Student ID: A3-1870", style: TextStyle(
                                               fontSize: 20,
-                                              color: Colors.black45,
+                                              color: Colors.blueGrey,
                                               fontStyle: FontStyle.italic),),
                                           SizedBox(height: 15,),
                                           Text("Flutter Developer",
@@ -572,9 +577,10 @@ class _AboutUsState extends State<AboutUs> {
                                 ),
                               ),
                               SizedBox(height: 20,),
+                            ///Rasel......................
                               Center(
                                 child: Container(
-                                  height: MediaQuery.of(context).size.height*.45,
+                                  height: MediaQuery.of(context).size.height*.48,
                                   width: MediaQuery
                                       .of(context)
                                       .size
@@ -606,9 +612,9 @@ class _AboutUsState extends State<AboutUs> {
                                           Text("Rasel Hassan", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
-                                          Text("AI Designation", style: TextStyle(
+                                          Text("Student ID: A3-1869", style: TextStyle(
                                               fontSize: 20,
-                                              color: Colors.black45,
+                                              color: Colors.blueGrey,
                                               fontStyle: FontStyle.italic),),
                                           SizedBox(height: 15,),
                                           Text("Flutter Developer",
@@ -646,7 +652,7 @@ class _AboutUsState extends State<AboutUs> {
                                                   child: IconButton(
                                                     onPressed: (){
                                                       launch(
-                                                          "mailto:mdalamincse6615@gmail.com?subjectimamhossen983@");
+                                                          "mailto:imamhossen983@gmail.com?subjectimamhossen983@");
                                                     },
 
                                                     icon:  FaIcon(FontAwesomeIcons.envelope),
@@ -690,9 +696,10 @@ class _AboutUsState extends State<AboutUs> {
                                 ),
                               ),
                               SizedBox(height: 20,),
+                            ///Zisan......................
                               Center(
                                 child: Container(
-                                  height:MediaQuery.of(context).size.height*.45,
+                                  height:MediaQuery.of(context).size.height*.48,
                                   width: MediaQuery
                                       .of(context)
                                       .size
@@ -724,9 +731,9 @@ class _AboutUsState extends State<AboutUs> {
                                           Text("Sharif Ullah Zisan", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
-                                          Text("AI Designation", style: TextStyle(
+                                          Text("Student ID: A3-1873", style: TextStyle(
                                               fontSize: 20,
-                                              color: Colors.black45,
+                                              color: Colors.blueGrey,
                                               fontStyle: FontStyle.italic),),
                                           SizedBox(height: 15,),
                                           Text("Flutter Developer",
@@ -808,9 +815,10 @@ class _AboutUsState extends State<AboutUs> {
                                 ),
                               ),
                               SizedBox(height: 20,),
+                            ///Ishak......................
                               Center(
                                 child: Container(
-                                  height: MediaQuery.of(context).size.height*.45,
+                                  height: MediaQuery.of(context).size.height*.48,
                                   width: MediaQuery
                                       .of(context)
                                       .size
@@ -842,9 +850,9 @@ class _AboutUsState extends State<AboutUs> {
                                           Text("Md Ishak", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
-                                          Text("AI Designation", style: TextStyle(
+                                          Text("Student ID: A3-1865", style: TextStyle(
                                               fontSize: 20,
-                                              color: Colors.black45,
+                                              color: Colors.blueGrey,
                                               fontStyle: FontStyle.italic),),
                                           SizedBox(height: 15,),
                                           Text("Flutter Developer",
@@ -926,9 +934,10 @@ class _AboutUsState extends State<AboutUs> {
                                 ),
                               ),
                               SizedBox(height: 20,),
+                            ///Senha......................
                               Center(
                                 child: Container(
-                                  height: MediaQuery.of(context).size.height*.45,
+                                  height: MediaQuery.of(context).size.height*.48,
                                   width: MediaQuery
                                       .of(context)
                                       .size
@@ -960,9 +969,9 @@ class _AboutUsState extends State<AboutUs> {
                                           Text("Senhasish", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
-                                          Text("AI Designation", style: TextStyle(
+                                          Text("Student ID: A3-1875", style: TextStyle(
                                               fontSize: 20,
-                                              color: Colors.black45,
+                                              color: Colors.blueGrey,
                                               fontStyle: FontStyle.italic),),
                                           SizedBox(height: 15,),
                                           Text("Flutter Developer",
@@ -1044,9 +1053,10 @@ class _AboutUsState extends State<AboutUs> {
                                 ),
                               ),
                               SizedBox(height: 20,),
+                           ///tomal.......................
                               Center(
                                 child: Container(
-                                  height:MediaQuery.of(context).size.height*.45,
+                                  height:MediaQuery.of(context).size.height*.48,
                                   width: MediaQuery
                                       .of(context)
                                       .size
@@ -1078,9 +1088,9 @@ class _AboutUsState extends State<AboutUs> {
                                           Text("Shahrear Tomal", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
-                                          Text("AI Designation", style: TextStyle(
+                                          Text("Student ID: A3-1863", style: TextStyle(
                                               fontSize: 20,
-                                              color: Colors.black45,
+                                              color: Colors.blueGrey,
                                               fontStyle: FontStyle.italic),),
                                           SizedBox(height: 15,),
                                           Text("Flutter Developer",
@@ -1162,9 +1172,10 @@ class _AboutUsState extends State<AboutUs> {
                                 ),
                               ),
                               SizedBox(height: 20,),
+                           ///mithun......................
                               Center(
                                 child: Container(
-                                  height: MediaQuery.of(context).size.height*.45,
+                                  height: MediaQuery.of(context).size.height*.48,
                                   width: MediaQuery
                                       .of(context)
                                       .size
@@ -1196,9 +1207,9 @@ class _AboutUsState extends State<AboutUs> {
                                           Text("Mithun Mandal", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
-                                          Text("AI Designation", style: TextStyle(
+                                          Text("Student ID: A3-1863", style: TextStyle(
                                               fontSize: 20,
-                                              color: Colors.black45,
+                                              color: Colors.blueGrey,
                                               fontStyle: FontStyle.italic),),
                                           SizedBox(height: 15,),
                                           Text("Flutter Developer",
@@ -1295,9 +1306,7 @@ class _AboutUsState extends State<AboutUs> {
                   ),
                 ),
               ],
-
             ),
-
           ],
         ),
       ),

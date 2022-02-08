@@ -7,14 +7,12 @@ import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_share/flutter_share.dart';
 import 'package:healthpro/data/fooddata.dart';
-import 'package:healthpro/data/gymdata.dart';
 import 'package:healthpro/data/healthdata.dart';
 import 'package:healthpro/exerciselist.dart';
 import 'package:healthpro/food_&_gymlist.dart';
 import 'package:healthpro/healthdetails.dart';
 import 'package:healthpro/model/about_us.dart';
 import 'package:healthpro/model/foodmodel.dart';
-import 'package:healthpro/model/gymmodel.dart';
 import 'package:healthpro/model/healthmodel.dart';
 import 'package:healthpro/model/privacy_policy.dart';
 
@@ -67,6 +65,7 @@ class _DashBoardState extends State<DashBoard> {
                 child: Column(children: [
                   ///abouat text Category section.................
                   Container(
+                    color: Color(0xFF1D0B6E),
                       alignment: Alignment.topCenter,
                       width: MediaQuery.of(context).size.width,
                       child: Padding(
@@ -93,7 +92,7 @@ class _DashBoardState extends State<DashBoard> {
                         } else if (imam.hasData) {
                           var Hossen = imam.data as List<FoodModel>;
                           return Padding(
-                            padding: const EdgeInsets.only(bottom: 15),
+                            padding: const EdgeInsets.only(bottom: 0),
                             child: Container(
                               height: MediaQuery.of(context).size.height * .27,
                               width: MediaQuery.of(context).size.width,
@@ -214,24 +213,25 @@ class _DashBoardState extends State<DashBoard> {
 
                   ///abouat Text gym section.................
                   Container(
+                    color: Color(0xFF1D0B6E),
                       alignment: Alignment.topCenter,
-                      margin: EdgeInsets.only(
-                        top: 10,
-                      ),
                       width: MediaQuery.of(context).size.width,
-                      child: Text(
-                        "",
-                        style: TextStyle(
-                            fontSize: 22,
-                            wordSpacing: .8,
-                            fontWeight: FontWeight.bold),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          "শরীরচর্চা",
+                          style: TextStyle(
+                              fontSize: 22,
+                              wordSpacing: .8,
+                              fontWeight: FontWeight.bold),
+                        ),
                       )),
 
                   ///category gym section......................
                   Padding(
                     padding: const EdgeInsets.all(5.0),
                     child: Container(
-                      width: MediaQuery.of(context).size.width * .9,
+                      width: MediaQuery.of(context).size.width ,
                       height: MediaQuery.of(context).size.height * .25,
                       decoration: BoxDecoration(
 
@@ -263,32 +263,18 @@ class _DashBoardState extends State<DashBoard> {
 
                   ///about text Slider section.................
                   Container(
+                    color: Color(0xFF1D0B6E),
                     alignment: Alignment.topCenter,
                     width: MediaQuery.of(context).size.width,
-                    child: Text(
-                      "শরীরের যত্ন",
-                      style:
-                          TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        "শরীরের যত্ন",
+                        style:
+                            TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                      ),
                     ),
                   ),
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -763,15 +749,13 @@ class _PopupMenuContentState extends State<PopupMenuContent>
                                 },
                               ),
                             ),
-                            //Chat box
-
                             const SizedBox(
                               height: 10,
                             ),
 
                             ///getHelp...........
                             GestureDetector(
-                              onTap: () => _closePopup("getHelp"),
+                              onTap: () => _closePopup("Coming soon....."),
                               child: Container(
                                 width: double.maxFinite,
                                 height: 150,
@@ -830,7 +814,7 @@ class _PopupMenuContentState extends State<PopupMenuContent>
   Future<void> share() async {
     await FlutterShare.share(
         title: 'Change your Lifestyle',
-        text: 'আপনি কি স্বাস্থ্য ঝুঁকিতে আছেন',
+        text: 'আপনি কি স্বাস্থ্য ঝুঁকিতে আছেন? তাহলে এখনই ফ্রিতে ডাউনলোড করে সমস্যার সমাধান করুন',
         linkUrl:
             'https://play.google.com/store/apps/details?id=com.eightynine.healthpro',
         chooserTitle: 'Example Chooser Title');

@@ -15,10 +15,12 @@ class _ExerciseListState extends State<ExerciseList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0x1C085AFF),
       appBar: AppBar(
         title: Text("শরীরচর্চা"),
       ),
-      body:   Padding(
+      body:
+      Padding(
         padding: const EdgeInsets.all(5.0),
         child: Container(
           width: MediaQuery.of(context).size.width ,
@@ -85,21 +87,21 @@ class _ExerciseListState extends State<ExerciseList> {
                                               10),
                                         ),
                                       ),
-                                      Padding(
-                                        padding:
-                                        const EdgeInsets.only(
-                                            left: 15.0, top: 5),
-                                        child: Text(
-                                            Hossen[index]
-                                                .name
-                                                .toString(),
-                                            textAlign:
-                                            TextAlign.left,
-                                            style: const TextStyle(
-                                                fontSize: 21,
-                                                fontWeight:
-                                                FontWeight
-                                                    .bold)),
+                                      Center(
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(10.0),
+                                          child: Text(
+                                              Hossen[index]
+                                                  .name
+                                                  .toString(),
+                                              textAlign:
+                                              TextAlign.left,
+                                              style: const TextStyle(
+                                                  fontSize: 21,
+                                                  fontWeight:
+                                                  FontWeight
+                                                      .bold)),
+                                        ),
                                       ),
                                     ],
                                   ),
