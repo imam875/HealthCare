@@ -4,14 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:healthpro/dashboard.dart';
 
-import 'food_&_gymlist.dart';
 
 void main() {
   runApp(const MyApp());
 
   SystemChrome.setSystemUIOverlayStyle(
-      SystemUiOverlayStyle(
-    systemNavigationBarColor: Colors.transparent, // navigation bar color
+      const SystemUiOverlayStyle(
+    systemNavigationBarColor: Color(0xFA8784EF), // navigation bar color
     statusBarColor: Color(0x1F1E1EFF), // status bar color
   ));
 
@@ -50,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
 
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         image: DecorationImage(
             image: AssetImage('assets/starthome.jpg'),
             fit: BoxFit.fill),
@@ -59,10 +58,10 @@ class _MyHomePageState extends State<MyHomePage> {
   }
   @override
   void initState() {
-    Timer(Duration(seconds: 5), () {
+    Timer(const Duration(seconds: 5), () {
       Navigator.pushReplacement(
           context, MaterialPageRoute(
-          builder: (context) =>DashBoard()
+          builder: (context) =>const DashBoard()
         )
        );
       }

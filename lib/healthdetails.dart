@@ -1,18 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'healthdetails.dart';
 
 class HealthDetails extends StatefulWidget {
-
-
   String id;
   String name;
   String title;
   String description;
   String image;
 
-
-  HealthDetails(this.id, this.name, this.title, this.description, this.image);
+  HealthDetails(this.id, this.name, this.title, this.description, this.image,
+      {Key? key})
+      : super(key: key);
 
   @override
   _DashBoardState createState() => _DashBoardState();
@@ -21,32 +18,38 @@ class HealthDetails extends StatefulWidget {
 class _DashBoardState extends State<HealthDetails> {
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-      backgroundColor: const Color(0x1F1E1EFF),
+      backgroundColor: const Color(0xFF000000),
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
-             foregroundColor:Colors.purple ,
-            title: Container(
-
-                child: Text(widget.name,style :TextStyle(fontSize: 24),)),
+            foregroundColor: Colors.white,
+            title: Text(
+              widget.name,
+              style: const TextStyle(fontSize: 24),
+            ),
             pinned: true,
             snap: true,
             floating: true,
-
+            backgroundColor: const Color(0xFA8784EF),
             expandedHeight: 220,
             shape: const RoundedRectangleBorder(
-                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30), bottomRight: Radius.circular(30))),
-            flexibleSpace: FlexibleSpaceBar(
-              background: ClipRRect(
-                borderRadius:
-                const BorderRadius.vertical(bottom: Radius.circular(30)),
-                child: SafeArea(
-                  child: Image.asset(
-                    widget.image
-                    ,
-                    fit: BoxFit.cover,
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(30),
+                    bottomRight: Radius.circular(30))),
+            flexibleSpace: Container(color: Colors.indigoAccent,
+              child: Padding(
+                padding: const EdgeInsets.only(top: 42.0,),
+                child: FlexibleSpaceBar(
+                  background: ClipRRect(
+                    borderRadius: const BorderRadius.vertical(
+                      bottom: Radius.circular(20),
+                    ),
+                    child: SafeArea(
+                      child: Image.asset(
+                        widget.image,fit: BoxFit.cover,
+                      ),
+                    ),
                   ),
                 ),
               ),
@@ -56,46 +59,39 @@ class _DashBoardState extends State<HealthDetails> {
             delegate: SliverChildListDelegate(
               [
                 const SizedBox(
-                  height: 18,
+                  height: 1,
                 ),
                 ListTile(
-                  title:  Text(
+                  title: Text(
                     widget.name,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontWeight: FontWeight.w800,
                       fontSize: 24,
                       color: Colors.indigoAccent,
                     ),
                   ),
-
                   trailing: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Row(
                         mainAxisSize: MainAxisSize.min,
-                        children: <Widget>[
+                        children: const <Widget>[
                           SizedBox(
-                            width: 26,
+                            width: 6,
                           ),
-
-
                         ],
                       ),
-
-
                     ],
                   ),
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 2,
                 ),
-
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 50),
+                  padding: const EdgeInsets.symmetric(horizontal: 50),
                   child: Text(
-                    widget.title
-                    ,
-                    style: TextStyle(
+                    widget.title,
+                    style: const TextStyle(
                       fontWeight: FontWeight.w800,
                       fontSize: 24,
                       color: Colors.white,
@@ -103,16 +99,15 @@ class _DashBoardState extends State<HealthDetails> {
                   ),
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 6,
                 ),
-
                 Padding(
-                  padding: EdgeInsets.only(left: 16, right: 16, bottom: 32),
+                  padding:
+                      const EdgeInsets.only(left: 16, right: 16, bottom: 32),
                   child: Card(
-
-                    color: Color(0x180606FF),
+                    color: const Color(0xFA8784EF),
                     elevation: 10,
-                    shape: OutlineInputBorder(
+                    shape: const OutlineInputBorder(
                       borderRadius: BorderRadius.only(
                           topRight: Radius.circular(25),
                           topLeft: Radius.circular(20),
@@ -120,16 +115,13 @@ class _DashBoardState extends State<HealthDetails> {
                           bottomLeft: Radius.circular(20)),
                       borderSide: BorderSide(color: Colors.white),
                     ),
-
-
                     child: Container(
-                      margin: EdgeInsets.only(top: 12),
+                      margin: const EdgeInsets.only(top: 12),
                       child: Padding(
                         padding: const EdgeInsets.all(12.0),
                         child: Text(
-                          widget.description
-                          ,
-                          style: TextStyle(
+                          widget.description,
+                          style: const TextStyle(
                             fontSize: 22,
                             fontWeight: FontWeight.w500,
                           ),
@@ -140,7 +132,6 @@ class _DashBoardState extends State<HealthDetails> {
                 ),
               ],
             ),
-
           ),
         ],
       ),

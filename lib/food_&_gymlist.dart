@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'healthdetails.dart';
+
 
 class FoodDetails extends StatefulWidget {
 
@@ -23,16 +23,16 @@ class _DashBoardState extends State<FoodDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0x1F1E1EFF),
+      backgroundColor: const Color(0x1F000000),
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
-            foregroundColor: Colors.purple,shadowColor: Colors.blue,
-            title: Text(widget.name,style :TextStyle(fontSize: 24,),),
+            foregroundColor: Colors.white,shadowColor: Colors.blue,
+            title: Container(color: const Color(0xFA8784EF),child: Text(widget.name,style :const TextStyle(fontSize: 24,),)),
             pinned: true,
             snap: true,
             floating: true,
-            backgroundColor: const Color(0xFF1C085A),
+            backgroundColor: const Color(0xFA8784EF),
             expandedHeight: 220,
             shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30), bottomRight: Radius.circular(30))),
@@ -59,7 +59,7 @@ class _DashBoardState extends State<FoodDetails> {
                 ListTile(
                   title:  Text(
                     widget.name,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontWeight: FontWeight.w800,
                       fontSize: 24,
                       color: Colors.indigoAccent,
@@ -72,12 +72,12 @@ class _DashBoardState extends State<FoodDetails> {
                       Row(
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
-                          SizedBox(
+                          const SizedBox(
                             width: 26,
                           ),
                           Text(
                             widget.category,
-                            style: TextStyle(
+                            style: const TextStyle(
                                 color: Colors.grey,
                                 fontWeight: FontWeight.w600,
                                 fontSize: 23),
@@ -85,7 +85,7 @@ class _DashBoardState extends State<FoodDetails> {
                         ],
                       ),
                       const SizedBox(
-                        height: 4,
+                        height: 2,
                       ),
 
                     ],
@@ -96,11 +96,11 @@ class _DashBoardState extends State<FoodDetails> {
                 ),
 
                  Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 50),
+                  padding: const EdgeInsets.symmetric(horizontal: 50),
                   child: Text(
                     widget.title
                   ,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontWeight: FontWeight.w800,
                       fontSize: 23,
                       color: Colors.white,
@@ -112,12 +112,12 @@ class _DashBoardState extends State<FoodDetails> {
                 ),
 
                  Padding(
-                  padding: EdgeInsets.only(left: 16, right: 16, bottom: 32),
+                  padding: const EdgeInsets.only(left: 16, right: 16, bottom: 32),
                   child: Card(
 
-                    color: Color(0x180606FF),
+                    color: const Color(0xFA8784EF),
                     elevation: 10,
-                    shape: OutlineInputBorder(
+                    shape: const OutlineInputBorder(
                       borderRadius: BorderRadius.only(
                           topRight: Radius.circular(25),
                           topLeft: Radius.circular(20),
@@ -128,13 +128,13 @@ class _DashBoardState extends State<FoodDetails> {
 
 
                     child: Container(
-                      margin: EdgeInsets.only(top: 5),
+                      margin: const EdgeInsets.only(top: 5),
                       child: Padding(
                         padding: const EdgeInsets.all(12.0),
                         child: Text(
                           widget.description
                           ,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 22,
                             fontWeight: FontWeight.w500,
                           ),

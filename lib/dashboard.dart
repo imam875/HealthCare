@@ -4,17 +4,14 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_share/flutter_share.dart';
 import 'package:healthpro/data/fooddata.dart';
-import 'package:healthpro/data/gymdata.dart';
 import 'package:healthpro/data/healthdata.dart';
 import 'package:healthpro/exerciselist.dart';
 import 'package:healthpro/food_&_gymlist.dart';
 import 'package:healthpro/healthdetails.dart';
 import 'package:healthpro/model/about_us.dart';
 import 'package:healthpro/model/foodmodel.dart';
-import 'package:healthpro/model/gymmodel.dart';
 import 'package:healthpro/model/healthmodel.dart';
 import 'package:healthpro/model/privacy_policy.dart';
 
@@ -29,25 +26,25 @@ class _DashBoardState extends State<DashBoard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0x1F1E1EFF),
+        backgroundColor: const Color(0xFA8784EF),
         appBar: AppBar(
-          backgroundColor: Colors.white38,
-          systemOverlayStyle: SystemUiOverlayStyle(
-            // Status bar color
-            statusBarColor: Color(0x1F1E1EFF),
-            systemNavigationBarColor: Color(0x1F1E1EFF),
-
-            // Status bar brightness (optional)
+          backgroundColor: const Color(0xFA8784EF),
+          systemOverlayStyle: const SystemUiOverlayStyle(
+            statusBarColor: Color(0xFA8784EF),
+            systemNavigationBarColor: Color(0xFA8784EF),
             statusBarIconBrightness:
                 Brightness.light, // For Android (dark icons)
           ),
           title: Row(
             children: [
-              Text(
+              const Text(
                 "স্বাস্থ্য সেবা",
-                style: TextStyle(fontSize: 22),
+                style: TextStyle(
+                  fontSize: 22,
+                  color: Colors.white,
+                ),
               ),
-              Spacer(),
+              const Spacer(),
               MyPopupMenu(
                 child: Icon(
                   Icons.menu_rounded,
@@ -61,20 +58,21 @@ class _DashBoardState extends State<DashBoard> {
         ),
         body: ListView(
           children: [
-            Container(
+            SizedBox(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height,
                 child: Column(children: [
                   ///abouat text Category section.................
-                  Container(
+                  Container(color: const Color(0xFA716EE5),
                       alignment: Alignment.topCenter,
                       width: MediaQuery.of(context).size.width,
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                      child: const Padding(
+                        padding: EdgeInsets.all(8.0),
                         child: Text(
                           "বিভিন্ন খাবারের উপকারিতা",
                           style: TextStyle(
                               fontSize: 22,
+                              color: Colors.white,
                               wordSpacing: .8,
                               fontWeight: FontWeight.bold),
                         ),
@@ -87,15 +85,15 @@ class _DashBoardState extends State<DashBoard> {
                         if (imam.hasError) {
                           return Center(
                             child: Container(
-                              child: Text("Loading........."),
+                              child: const Text("Loading........."),
                             ),
                           );
                         } else if (imam.hasData) {
                           var Hossen = imam.data as List<FoodModel>;
                           return Padding(
                             padding: const EdgeInsets.only(bottom: 15),
-                            child: Container(
-                              height: MediaQuery.of(context).size.height * .27,
+                            child: SizedBox(
+                              height: MediaQuery.of(context).size.height * .25,
                               width: MediaQuery.of(context).size.width,
                               child: ListView.builder(
                                   scrollDirection: Axis.horizontal,
@@ -105,13 +103,14 @@ class _DashBoardState extends State<DashBoard> {
                                       padding: const EdgeInsets.only(left: 10),
                                       child: InkWell(
                                         child: Card(
+                                          color: const Color(0xFA8784EF),
                                           shape: OutlineInputBorder(
                                               borderRadius:
                                                   BorderRadius.circular(30),
                                               borderSide: const BorderSide(
                                                   color: Colors.white)),
                                           elevation: 15,
-                                          child: Container(
+                                          child: SizedBox(
                                             height: MediaQuery.of(context)
                                                 .size
                                                 .height,
@@ -125,7 +124,7 @@ class _DashBoardState extends State<DashBoard> {
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.start,
                                               children: [
-                                                Container(
+                                                SizedBox(
                                                   height: 130,
                                                   width: MediaQuery.of(context)
                                                       .size
@@ -165,7 +164,8 @@ class _DashBoardState extends State<DashBoard> {
                                                         .category
                                                         .toString(),
                                                     style: const TextStyle(
-                                                        fontSize: 19),
+                                                      fontSize: 19,
+                                                    ),
                                                   ),
                                                 ),
                                               ],
@@ -204,105 +204,85 @@ class _DashBoardState extends State<DashBoard> {
                             ),
                           );
                         } else {
-                          return Center(
-                            child: Container(
-                              child: Text("Loading........."),
-                            ),
+                          return const Center(
+                            child: Text("Loading........."),
                           );
                         }
                       }),
 
                   ///abouat Text gym section.................
                   Container(
+                      color: const Color(0xFA716EE5),
                       alignment: Alignment.topCenter,
-                      margin: EdgeInsets.only(
-                        top: 10,
-                      ),
                       width: MediaQuery.of(context).size.width,
-                      child: Text(
-                        "",
-                        style: TextStyle(
-                            fontSize: 22,
-                            wordSpacing: .8,
-                            fontWeight: FontWeight.bold),
+                      child: const Padding(
+                        padding: EdgeInsets.all(2.0),
+                        child: Text(
+                          "শরীরচর্চা",
+                          style: TextStyle(
+                              fontSize: 22,
+                              wordSpacing: .8,
+                              fontWeight: FontWeight.bold),
+                        ),
                       )),
 
                   ///category gym section......................
                   Padding(
-                    padding: const EdgeInsets.all(5.0),
+                    padding: const EdgeInsets.all(0.0),
                     child: Container(
-                      width: MediaQuery.of(context).size.width * .9,
-                      height: MediaQuery.of(context).size.height * .25,
-                      decoration: BoxDecoration(
-
-                          borderRadius: BorderRadius.circular(25)),
-                      child: Stack(
-                        children: [
-                          Container(
-                              width: MediaQuery.of(context).size.width ,
-                              height: MediaQuery.of(context).size.height,
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(25),
-                                child: InkWell(
-                                  onTap:(){
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(builder: (context)=>ExerciseList())
-                                    );
-                                  },
-                                  child: Image.asset(
+                        width: MediaQuery.of(context).size.width * .9,
+                        height: MediaQuery.of(context).size.height * .25,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(25)),
+                        child: Stack(
+                          children: [
+                            SizedBox(
+                                width: MediaQuery.of(context).size.width,
+                                height: MediaQuery.of(context).size.height,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(25),
+                                  child: InkWell(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const ExerciseList()));
+                                    },
+                                    child: Image.asset(
                                       "assets/exercise.jpg",
-                                    fit: BoxFit.cover,
+                                      fit: BoxFit.cover,
+                                    ),
                                   ),
-                                ),
-                              )),
-                        ],
-                      )
-                    ),
+                                )),
+                          ],
+                        )),
                   ),
 
                   ///about text Slider section.................
                   Container(
+                    color: const Color(0xFA716EE5),
+
                     alignment: Alignment.topCenter,
                     width: MediaQuery.of(context).size.width,
-                    child: Text(
+                    child: const Text(
                       "শরীরের যত্ন",
-                      style:
-                          TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontSize: 22,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
                     ),
                   ),
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                   ///Slider section......................
-                  Container(
+                  SizedBox(
                       height: MediaQuery.of(context).size.height * .22,
                       child: FutureBuilder(
                           future: healthfunction(),
                           builder: (context, info) {
                             if (info.hasError) {
-                              return Center(
-                                child: Container(
-                                  child: Text("Loading......"),
-                                ),
+                              return const Center(
+                                child: Text("Loading......"),
                               );
                             } else if (info.hasData) {
                               var list = info.data as List<HealthModel>;
@@ -311,61 +291,50 @@ class _DashBoardState extends State<DashBoard> {
                                 itemBuilder: (context, index, i) {
                                   return InkWell(
                                     child: Card(
+                                      color: Colors.indigoAccent,
                                       shape: OutlineInputBorder(
                                           borderRadius:
-                                          BorderRadius.circular(30),
+                                              BorderRadius.circular(30),
                                           borderSide: const BorderSide(
                                               color: Colors.white)),
                                       elevation: 15,
-                                      child: Container(
-                                        height: MediaQuery.of(context)
-                                            .size
-                                            .height,
-                                        width: MediaQuery.of(context)
-                                            .size
-                                            .width *
-                                            .9,
+                                      child: SizedBox(
+                                        height:
+                                            MediaQuery.of(context).size.height,
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                .9,
                                         child: Column(
                                           mainAxisAlignment:
-                                          MainAxisAlignment.start,
+                                              MainAxisAlignment.start,
                                           crossAxisAlignment:
-                                          CrossAxisAlignment.start,
+                                              CrossAxisAlignment.start,
                                           children: [
-                                            Container(
+                                            SizedBox(
                                               height: 120,
-                                              width:
-                                              MediaQuery.of(context)
+                                              width: MediaQuery.of(context)
                                                   .size
                                                   .width,
                                               child: ClipRRect(
                                                 child: Image.asset(
-                                                  list[index]
-                                                      .image
-                                                      .toString(),
+                                                  list[index].image.toString(),
                                                   fit: BoxFit.cover,
                                                 ),
                                                 borderRadius:
-                                                BorderRadius
-                                                    .circular(30),
+                                                    BorderRadius.circular(30),
                                               ),
                                             ),
                                             Center(
                                               child: Padding(
-                                                padding:
-                                                const EdgeInsets
-                                                    .only(top: 5),
+                                                padding: const EdgeInsets.only(
+                                                    top: 5),
                                                 child: Text(
-                                                    list[index]
-                                                        .name
-                                                        .toString(),
-                                                    textAlign:
-                                                    TextAlign.left,
-                                                    style:
-                                                    const TextStyle(
+                                                    list[index].name.toString(),
+                                                    textAlign: TextAlign.left,
+                                                    style: const TextStyle(
                                                       fontSize: 22,
                                                       fontWeight:
-                                                      FontWeight
-                                                          .bold,
+                                                          FontWeight.bold,
                                                     )),
                                               ),
                                             ),
@@ -379,12 +348,8 @@ class _DashBoardState extends State<DashBoard> {
                                           MaterialPageRoute(
                                               builder: (Contex) =>
                                                   HealthDetails(
-                                                    list[index]
-                                                        .id
-                                                        .toString(),
-                                                    list[index]
-                                                        .name
-                                                        .toString(),
+                                                    list[index].id.toString(),
+                                                    list[index].name.toString(),
                                                     list[index]
                                                         .title
                                                         .toString(),
@@ -406,11 +371,9 @@ class _DashBoardState extends State<DashBoard> {
                                   enableInfiniteScroll: true,
                                   reverse: false,
                                   autoPlay: true,
-                                  autoPlayInterval:
-                                  const Duration(seconds: 3),
+                                  autoPlayInterval: const Duration(seconds: 3),
                                   autoPlayAnimationDuration:
-                                  const Duration(
-                                      milliseconds: 1200),
+                                      const Duration(milliseconds: 1200),
                                   autoPlayCurve: Curves.linear,
                                   enlargeCenterPage: true,
                                   scrollDirection: Axis.horizontal,
@@ -418,12 +381,9 @@ class _DashBoardState extends State<DashBoard> {
                                   pageSnapping: false,
                                 ),
                               );
-
                             } else {
-                              return Center(
-                                child: Container(
-                                  child: Text("Loading......"),
-                                ),
+                              return const Center(
+                                child: Text("Loading......"),
                               );
                             }
                           })),
@@ -597,7 +557,7 @@ class _PopupMenuContentState extends State<PopupMenuContent>
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => AboutUs()));
+                                        builder: (context) => const AboutUs()));
                               },
                               child: Row(
                                 children: [
@@ -635,7 +595,8 @@ class _PopupMenuContentState extends State<PopupMenuContent>
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => PrivacyPolicy()));
+                                        builder: (context) =>
+                                            const PrivacyPolicy()));
                               },
                               child: Row(
                                 children: [
@@ -703,7 +664,7 @@ class _PopupMenuContentState extends State<PopupMenuContent>
                             ),
 
                             ///Exit.............
-                            Container(
+                            SizedBox(
                               height: MediaQuery.of(context).size.height * .06,
                               width: MediaQuery.of(context).size.width,
                               child: ListTile(
@@ -719,8 +680,8 @@ class _PopupMenuContentState extends State<PopupMenuContent>
                                     color: Colors.greenAccent,
                                     borderRadius: BorderRadius.circular(24),
                                   ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(8),
+                                  child: const Padding(
+                                    padding: EdgeInsets.all(8),
                                     child: Icon(
                                       Icons.exit_to_app_outlined,
                                       color: Colors.white,
@@ -731,33 +692,30 @@ class _PopupMenuContentState extends State<PopupMenuContent>
                                   showDialog(
                                       context: context,
                                       builder: (context) {
-                                        return Container(
-                                          child: AlertDialog(
-                                            title: Text(
-                                                "Exit from স্বাস্থ্য সেবা"),
-                                            content: Text(
-                                                "Are you sure want to exit"),
-                                            actions: [
-                                              FlatButton(
-                                                onPressed: () {
-                                                  Navigator.pop(context);
-                                                },
-                                                child: Text("No",
-                                                    style: TextStyle(
-                                                        fontSize: 20)),
-                                              ),
-                                              FlatButton(
-                                                onPressed: () {
-                                                  exit(0);
-                                                },
-                                                child: Text(
-                                                  "Ok",
+                                        return AlertDialog(
+                                          title: const Text(
+                                              "Exit from স্বাস্থ্য সেবা"),
+                                          content: const Text(
+                                              "Are you sure want to exit"),
+                                          actions: [
+                                            FlatButton(
+                                              onPressed: () {
+                                                Navigator.pop(context);
+                                              },
+                                              child: const Text("No",
                                                   style:
-                                                      TextStyle(fontSize: 20),
-                                                ),
+                                                      TextStyle(fontSize: 20)),
+                                            ),
+                                            FlatButton(
+                                              onPressed: () {
+                                                exit(0);
+                                              },
+                                              child: const Text(
+                                                "Ok",
+                                                style: TextStyle(fontSize: 20),
                                               ),
-                                            ],
-                                          ),
+                                            ),
+                                          ],
                                         );
                                       });
                                 },
@@ -785,7 +743,13 @@ class _PopupMenuContentState extends State<PopupMenuContent>
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Center(child: Image.asset("assets/logo.png", height: MediaQuery.of(context).size.height*.12,)),
+                                      Center(
+                                          child: Image.asset(
+                                        "assets/logo.png",
+                                        height:
+                                            MediaQuery.of(context).size.height *
+                                                .12,
+                                      )),
                                     ],
                                   ),
                                 ),

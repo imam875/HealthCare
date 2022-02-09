@@ -16,27 +16,29 @@ class _ExerciseListState extends State<ExerciseList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("শরীরচর্চা"),
+        backgroundColor: const Color(0xFA8784EF),
+
+        title: const Text("শরীরচর্চা",),
       ),
       body:   Padding(
-        padding: const EdgeInsets.all(5.0),
-        child: Container(
+        padding: const EdgeInsets.all(8.0),
+
+        child: SizedBox(
+
           width: MediaQuery.of(context).size.width ,
           height: MediaQuery.of(context).size.height ,
           child: FutureBuilder(
               future: gymfunction(),
               builder: (context, imam) {
                 if (imam.hasError) {
-                  return Center(
-                    child: Container(
-                      child: Text("Loading........."),
-                    ),
+                  return const Center(
+                    child: Text("Loading........."),
                   );
                 } else if (imam.hasData) {
                   var Hossen = imam.data as List<gymmodel>;
                   return Padding(
                     padding: const EdgeInsets.only(bottom: 15),
-                    child: Container(
+                    child: SizedBox(
                       height:
                       MediaQuery.of(context).size.height * .24,
                       width: MediaQuery.of(context).size.width,
@@ -46,13 +48,14 @@ class _ExerciseListState extends State<ExerciseList> {
                           itemBuilder: (context, index) {
                             return InkWell(
                               child: Card(
+                                color: const Color(0xFA8784EF),
                                 shape: OutlineInputBorder(
                                     borderRadius:
                                     BorderRadius.circular(10),
                                     borderSide: const BorderSide(
                                         color: Colors.white)),
                                 elevation: 15,
-                                child: Container(
+                                child: SizedBox(
                                   height: MediaQuery.of(context)
                                       .size
                                       .height *
@@ -67,7 +70,7 @@ class _ExerciseListState extends State<ExerciseList> {
                                     crossAxisAlignment:
                                     CrossAxisAlignment.start,
                                     children: [
-                                      Container(
+                                      SizedBox(
                                         height: 130,
                                         width:
                                         MediaQuery.of(context)
@@ -136,10 +139,8 @@ class _ExerciseListState extends State<ExerciseList> {
                     ),
                   );
                 } else {
-                  return Center(
-                    child: Container(
-                      child: Text("Loading........."),
-                    ),
+                  return const Center(
+                    child: Text("Loading........."),
                   );
                 }
               }),

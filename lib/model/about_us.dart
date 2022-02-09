@@ -21,14 +21,11 @@ class _AboutUsState extends State<AboutUs> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Developers of স্বাস্থ্য সেবা", style: TextStyle(
+          title: const Text("Developers of স্বাস্থ্য সেবা", style: TextStyle(
               fontSize: 22),),
-          backgroundColor: Colors.black26,
-          actions: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Icon(Icons.help),
-            )
+          backgroundColor:  const Color(0xFA8784EF),
+          actions: const [
+
           ],
         ),
         body: ListView(
@@ -38,13 +35,13 @@ class _AboutUsState extends State<AboutUs> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Center(
-                    child: Container(
+                    child: SizedBox(
                       height: MediaQuery.of(context).size.height*.45,
                       width: MediaQuery
                           .of(context)
                           .size
                           .width * 0.95,
-                      child: Card(
+                      child: Card(color: const Color(0xFA716EE5),
                         child: Padding(
                           padding: const EdgeInsets.all(12.0),
                           child: Column(
@@ -53,25 +50,25 @@ class _AboutUsState extends State<AboutUs> {
                             crossAxisAlignment:
                             CrossAxisAlignment.start,
                             children: [
-                              Text("Feedback", style: TextStyle(
+                              const Text("Feedback", style: TextStyle(
                                   fontSize: 25, fontWeight: FontWeight.bold),),
-                              SizedBox(height: 10,),
-                              Container(
+                              const SizedBox(height: 10,),
+                              SizedBox(
                                 height: MediaQuery.of(context).size.height*.30,
-                                child: Text(
-                                  "If you love using this app, give a review in Google play store. It would really inspire us to keep this app alive. \nNote: Contract imamhossen983@gmail.com & \nzihad650top@gmail.com for any further assistance.",
+                                child: const Text(
+                                  "If you love using this app, give a review in Google play store. It would really inspire us to keep this app alive. \nNote: Contract imamhossen983@gmail.com ,\nzihad650top@gmail.com &\n jisanjomadder@gmail.com for any further assistance.",
                                   style: TextStyle(fontSize: 20),),
                               )
                             ],),
                         ),
                         elevation: 10,
-                        shape: OutlineInputBorder(
+                        shape: const OutlineInputBorder(
                           borderRadius: BorderRadius.only(
                               topRight: Radius.circular(20),
                               topLeft: Radius.circular(20),
                               bottomRight: Radius.circular(20),
                               bottomLeft: Radius.circular(20)),
-                          borderSide: BorderSide(color: Colors.blueAccent),
+                          borderSide: BorderSide(color: Colors.white),
                         ),
                       ),
                     ),
@@ -80,12 +77,12 @@ class _AboutUsState extends State<AboutUs> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Center(
-                    child: Container(
+                    child: SizedBox(
                       width: MediaQuery
                           .of(context)
                           .size
                           .width * 0.95,
-                      child: Card(
+                      child: Card(color: const Color(0xFA8784EF),
                         child: Padding(
                           padding: const EdgeInsets.all(18.0),
                           child: Column(
@@ -94,10 +91,10 @@ class _AboutUsState extends State<AboutUs> {
                             crossAxisAlignment:
                             CrossAxisAlignment.start,
                             children: [
-                              Text("Mentor Of স্বাস্থ্য সেবা",
+                              const Text("Mentor Of স্বাস্থ্য সেবা",
                             style: TextStyle(fontSize: 31, fontWeight: FontWeight.bold),),
                               Center(
-                                child: Container(
+                                child: SizedBox(
                                   height: MediaQuery.of(context).size.height*.48,
                                   width: MediaQuery
                                       .of(context)
@@ -105,7 +102,7 @@ class _AboutUsState extends State<AboutUs> {
                                       .width * .82,
                                   child: Card(
                                     elevation: 10,
-                                    shape: OutlineInputBorder(
+                                    shape: const OutlineInputBorder(
                                       borderRadius: BorderRadius.only(
                                           topRight: Radius.circular(20),
                                           topLeft: Radius.circular(20),
@@ -121,21 +118,21 @@ class _AboutUsState extends State<AboutUs> {
                                         crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                         children: [
-                                          CircleAvatar(
+                                          const CircleAvatar(
                                             backgroundImage: AssetImage(
                                                 "assets/Mentor.jpg"),
                                             maxRadius: 50,
                                           ),
-                                          SizedBox(height: 15,),
-                                          Text("Md Al-Amin Mia", style: TextStyle(
+                                          const SizedBox(height: 15,),
+                                          const Text("Md Al-Amin Mia", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
-                                          Text("Mentor", style: TextStyle(
+                                          const Text("AI Designation", style: TextStyle(
                                               fontSize: 20,
                                               color: Colors.black45,
                                               fontStyle: FontStyle.italic),),
-                                          SizedBox(height: 15,),
-                                          Text("Flutter Developer",
+                                          const SizedBox(height: 15,),
+                                          const Text("Flutter Developer",
                                             style: TextStyle(fontSize: 25,
                                                 color: Colors.black),),
                                           Container(
@@ -156,7 +153,7 @@ class _AboutUsState extends State<AboutUs> {
                                                         ){
                                                       _launchInWebViewOrVC("https://www.facebook.com/alamincse6615");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.facebook,
+                                                    icon: const FaIcon(FontAwesomeIcons.facebook,
                                                     ),
                                                   ),
                                                 ),
@@ -173,7 +170,7 @@ class _AboutUsState extends State<AboutUs> {
                                                           "mailto:mdalamincse6615@gmail.com?subjectimamhossen983@");
                                                     },
 
-                                                    icon:  FaIcon(FontAwesomeIcons.envelope),
+                                                    icon:  const FaIcon(FontAwesomeIcons.envelope),
                                                   ),
                                                 ),
                                                 Container(
@@ -187,7 +184,7 @@ class _AboutUsState extends State<AboutUs> {
                                                     onPressed: (){
                                                       _launchInWebViewOrVC("https://bd.linkedin.com/in/alamincse6615");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.linkedin),
+                                                    icon: const FaIcon(FontAwesomeIcons.linkedin),
                                                   ),
                                                 ),
                                                 Container(
@@ -201,7 +198,7 @@ class _AboutUsState extends State<AboutUs> {
                                                     onPressed: (){
                                                       _launchInWebViewOrVC("https://github.com/alamincse6615");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.github),
+                                                    icon: const FaIcon(FontAwesomeIcons.github),
                                                   ),
                                                 ),
                                               ],
@@ -215,10 +212,10 @@ class _AboutUsState extends State<AboutUs> {
                                 ),
                               ),
 
-                              Text("Active Developers",
+                              const Text("Active Developers",
                               style: TextStyle(fontSize: 33, fontWeight: FontWeight.bold),),
                               Center(
-                                child: Container(
+                                child: SizedBox(
                                   height: MediaQuery.of(context).size.height*.45,
                                   width: MediaQuery
                                       .of(context)
@@ -226,7 +223,7 @@ class _AboutUsState extends State<AboutUs> {
                                       .width * .82,
                                   child: Card(
                                     elevation: 10,
-                                    shape: OutlineInputBorder(
+                                    shape: const OutlineInputBorder(
                                       borderRadius: BorderRadius.only(
                                           topRight: Radius.circular(20),
                                           topLeft: Radius.circular(20),
@@ -242,21 +239,21 @@ class _AboutUsState extends State<AboutUs> {
                                         crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                         children: [
-                                          CircleAvatar(
+                                          const CircleAvatar(
                                             backgroundImage: AssetImage(
                                                 "assets/zihad.JPG"),
                                             maxRadius: 50,
                                           ),
-                                          SizedBox(height: 15,),
-                                          Text("Zihadul Islam", style: TextStyle(
+                                          const SizedBox(height: 15,),
+                                          const Text("Zihadul Islam", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
-                                          Text("ID: A3-1861", style: TextStyle(
+                                          const Text("AI Designation", style: TextStyle(
                                               fontSize: 20,
                                               color: Colors.black45,
                                               fontStyle: FontStyle.italic),),
-                                          SizedBox(height: 15,),
-                                          Text("Flutter Developer",
+                                          const SizedBox(height: 15,),
+                                          const Text("Flutter Developer",
                                             style: TextStyle(fontSize: 25,
                                                 color: Colors.black),),
                                           Container(
@@ -277,7 +274,7 @@ class _AboutUsState extends State<AboutUs> {
                                                         ){
                                                       _launchInWebViewOrVC("https://www.facebook.com/ZihadulIslam02");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.facebook,
+                                                    icon: const FaIcon(FontAwesomeIcons.facebook,
                                                     ),
                                                   ),
                                                 ),
@@ -294,7 +291,7 @@ class _AboutUsState extends State<AboutUs> {
                                                           "mailto:zihad650top@gmail.com?subjectimamhossen983@");
                                                     },
 
-                                                    icon:  FaIcon(FontAwesomeIcons.envelope),
+                                                    icon:  const FaIcon(FontAwesomeIcons.envelope),
                                                   ),
                                                 ),
                                                 Container(
@@ -308,7 +305,7 @@ class _AboutUsState extends State<AboutUs> {
                                                     onPressed: (){
                                                       _launchInWebViewOrVC("https://www.linkedin.com/in/marketerzihad");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.linkedin),
+                                                    icon: const FaIcon(FontAwesomeIcons.linkedin),
                                                   ),
                                                 ),
                                                 Container(
@@ -322,7 +319,7 @@ class _AboutUsState extends State<AboutUs> {
                                                     onPressed: (){
                                                       _launchInWebViewOrVC("https://github.com/zihad650");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.github),
+                                                    icon: const FaIcon(FontAwesomeIcons.github),
                                                   ),
                                                 ),
                                               ],
@@ -334,9 +331,9 @@ class _AboutUsState extends State<AboutUs> {
                                   ),
                                 ),
                               ),
-                              SizedBox(height: 20,),
+                              const SizedBox(height: 20,),
                               Center(
-                                child: Container(
+                                child: SizedBox(
                                   height: MediaQuery.of(context).size.height*.48,
                                   width: MediaQuery
                                       .of(context)
@@ -344,7 +341,7 @@ class _AboutUsState extends State<AboutUs> {
                                       .width * .82,
                                   child: Card(
                                     elevation: 10,
-                                    shape: OutlineInputBorder(
+                                    shape: const OutlineInputBorder(
                                       borderRadius: BorderRadius.only(
                                           topRight: Radius.circular(20),
                                           topLeft: Radius.circular(20),
@@ -360,21 +357,21 @@ class _AboutUsState extends State<AboutUs> {
                                         crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                         children: [
-                                          CircleAvatar(
+                                          const CircleAvatar(
                                             backgroundImage: AssetImage(
                                                 "assets/imam.jpg"),
                                             maxRadius: 50,
                                           ),
-                                          SizedBox(height: 15,),
-                                          Text("Hm Imam Hossen", style: TextStyle(
+                                          const SizedBox(height: 15,),
+                                          const Text("Hm Imam Hossen", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
-                                          Text("ID: A3-1862", style: TextStyle(
+                                          const Text("AI Designation", style: TextStyle(
                                               fontSize: 20,
                                               color: Colors.black45,
                                               fontStyle: FontStyle.italic),),
-                                          SizedBox(height: 15,),
-                                          Text("Flutter Developer",
+                                          const SizedBox(height: 15,),
+                                          const Text("Flutter Developer",
                                             style: TextStyle(fontSize: 25,
                                                 color: Colors.black),),
                                           Container(
@@ -395,7 +392,7 @@ class _AboutUsState extends State<AboutUs> {
                                                         ){
                                                       _launchInWebViewOrVC("https://www.facebook.com/imamhossen983");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.facebook,
+                                                    icon: const FaIcon(FontAwesomeIcons.facebook,
                                                     ),
                                                   ),
                                                 ),
@@ -412,7 +409,7 @@ class _AboutUsState extends State<AboutUs> {
                                                           "mailto:mdalamincse6615@gmail.com?subjectimamhossen983@");
                                                     },
 
-                                                    icon:  FaIcon(FontAwesomeIcons.envelope),
+                                                    icon:  const FaIcon(FontAwesomeIcons.envelope),
                                                   ),
                                                 ),
                                                 Container(
@@ -426,7 +423,7 @@ class _AboutUsState extends State<AboutUs> {
                                                     onPressed: (){
                                                       _launchInWebViewOrVC("https://www.linkedin.com/in/imam-hossen-16a380199");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.linkedin),
+                                                    icon: const FaIcon(FontAwesomeIcons.linkedin),
                                                   ),
                                                 ),
                                                 Container(
@@ -440,7 +437,7 @@ class _AboutUsState extends State<AboutUs> {
                                                     onPressed: (){
                                                       _launchInWebViewOrVC("https://github.com/Imam875");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.github),
+                                                    icon: const FaIcon(FontAwesomeIcons.github),
                                                   ),
                                                 ),
                                               ],
@@ -453,17 +450,17 @@ class _AboutUsState extends State<AboutUs> {
                                   ),
                                 ),
                               ),
-                              SizedBox(height: 20,),
+                              const SizedBox(height: 20,),
                               Center(
-                                child: Container(
-                                  height: MediaQuery.of(context).size.height*.52,
+                                child: SizedBox(
+                                  height: MediaQuery.of(context).size.height*.60,
                                   width: MediaQuery
                                       .of(context)
                                       .size
                                       .width * .82,
                                   child: Card(
                                     elevation: 10,
-                                    shape: OutlineInputBorder(
+                                    shape: const OutlineInputBorder(
                                       borderRadius: BorderRadius.only(
                                           topRight: Radius.circular(20),
                                           topLeft: Radius.circular(20),
@@ -479,23 +476,35 @@ class _AboutUsState extends State<AboutUs> {
                                         crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                         children: [
-                                          CircleAvatar(
-                                            backgroundImage: AssetImage(
-                                                "assets/nurunnobe.jpg"),
-                                            maxRadius: 50,
+                                          const Center(
+                                            child: CircleAvatar(
+                                              backgroundImage: AssetImage(
+                                                  "assets/nurunnobe.jpg"),
+                                              maxRadius: 50,
+                                            ),
                                           ),
-                                          SizedBox(height: 15,),
-                                          Text("Nurunnobe", style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 30),),
-                                          Text("ID: A3-1870", style: TextStyle(
-                                              fontSize: 20,
-                                              color: Colors.black45,
-                                              fontStyle: FontStyle.italic),),
-                                          SizedBox(height: 15,),
-                                          Text("Flutter Developer",
-                                            style: TextStyle(fontSize: 25,
-                                                color: Colors.black),),
+                                          const Center(child: SizedBox(height: 15,)),
+                                          const Center(
+                                            child: Text("Nurunnobe  Jisan", style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 30),),
+                                          ),
+                                          const Center(
+                                            child: Center(
+                                              child: Text("    Mobile Developer\n              &\nSocial Media Manager", style: TextStyle(
+                                                  fontSize: 22,
+                                                  color: Color(0xFA8784EF),
+                                                  fontStyle: FontStyle.italic),),
+                                            ),
+                                          ),
+                                          const Center(child: Center(child: SizedBox(height: 15,))),
+                                          const Center(
+                                            child: Center(
+                                                child: Text("🔭 I’m currently working on Flutter\n🌱 I’m currently learning React\n💬 Ask me about Flutter & Dart.\nI have experience in developing and designing iOS, android, web and desktop apps, responsive websites.",
+                                                  style: TextStyle(fontSize: 15,
+                                                      color: Colors.white),),
+                                            ),
+                                          ),
                                           Container(
                                             alignment: Alignment.bottomLeft,
                                             height: 75,
@@ -504,7 +513,7 @@ class _AboutUsState extends State<AboutUs> {
                                               children: [
                                                 Container(
                                                   decoration: BoxDecoration(
-                                                      color: Colors.blue,
+                                                      color: Colors.lightBlueAccent,
                                                       borderRadius: BorderRadius.circular(20)
                                                   ),
                                                   height: 40,
@@ -514,13 +523,13 @@ class _AboutUsState extends State<AboutUs> {
                                                         ){
                                                       _launchInWebViewOrVC("https://www.facebook.com/nurunnobejisan");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.facebook,
+                                                    icon: const FaIcon(FontAwesomeIcons.facebook,
                                                     ),
                                                   ),
                                                 ),
                                                 Container(
                                                   decoration: BoxDecoration(
-                                                      color: Colors.red,
+                                                      color: Colors.purpleAccent,
                                                       borderRadius: BorderRadius.circular(20)
                                                   ),
                                                   height: 40,
@@ -531,7 +540,7 @@ class _AboutUsState extends State<AboutUs> {
                                                           "mailto:jisanjomadder@gmail.com?subjectimamhossen983@");
                                                     },
 
-                                                    icon:  FaIcon(FontAwesomeIcons.envelope),
+                                                    icon:  const FaIcon(FontAwesomeIcons.envelope),
                                                   ),
                                                 ),
                                                 Container(
@@ -545,7 +554,7 @@ class _AboutUsState extends State<AboutUs> {
                                                     onPressed: (){
                                                       _launchInWebViewOrVC("https://www.linkedin.com/in/nurunnobejisan");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.linkedin),
+                                                    icon: const FaIcon(FontAwesomeIcons.linkedin),
                                                   ),
                                                 ),
                                                 Container(
@@ -559,7 +568,7 @@ class _AboutUsState extends State<AboutUs> {
                                                     onPressed: (){
                                                       _launchInWebViewOrVC("https://github.com/nurunnobejisan");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.github),
+                                                    icon: const FaIcon(FontAwesomeIcons.github),
                                                   ),
                                                 ),
                                               ],
@@ -571,9 +580,9 @@ class _AboutUsState extends State<AboutUs> {
                                   ),
                                 ),
                               ),
-                              SizedBox(height: 20,),
+                              const SizedBox(height: 20,),
                               Center(
-                                child: Container(
+                                child: SizedBox(
                                   height: MediaQuery.of(context).size.height*.45,
                                   width: MediaQuery
                                       .of(context)
@@ -581,7 +590,7 @@ class _AboutUsState extends State<AboutUs> {
                                       .width * .82,
                                   child: Card(
                                     elevation: 10,
-                                    shape: OutlineInputBorder(
+                                    shape: const OutlineInputBorder(
                                       borderRadius: BorderRadius.only(
                                           topRight: Radius.circular(20),
                                           topLeft: Radius.circular(20),
@@ -597,21 +606,21 @@ class _AboutUsState extends State<AboutUs> {
                                         crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                         children: [
-                                          CircleAvatar(
+                                          const CircleAvatar(
                                             backgroundImage: AssetImage(
                                                 "assets/rasel.jpg"),
                                             maxRadius: 50,
                                           ),
-                                          SizedBox(height: 15,),
-                                          Text("Rasel Hassan", style: TextStyle(
+                                          const SizedBox(height: 15,),
+                                          const Text("Rasel Hassan", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
-                                          Text("ID: A3-1869", style: TextStyle(
+                                          const Text("AI Designation", style: TextStyle(
                                               fontSize: 20,
                                               color: Colors.black45,
                                               fontStyle: FontStyle.italic),),
-                                          SizedBox(height: 15,),
-                                          Text("Flutter Developer",
+                                          const SizedBox(height: 15,),
+                                          const Text("Flutter Developer",
                                             style: TextStyle(fontSize: 25,
                                                 color: Colors.black),),
                                           Container(
@@ -630,9 +639,9 @@ class _AboutUsState extends State<AboutUs> {
                                                   child: IconButton(
                                                     onPressed: (
                                                         ){
-                                                      _launchInWebViewOrVC("https://www.facebook.com/raselhassan420");
+                                                      _launchInWebViewOrVC("https://www.facebook.com/imamhossen983");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.facebook,
+                                                    icon: const FaIcon(FontAwesomeIcons.facebook,
                                                     ),
                                                   ),
                                                 ),
@@ -646,10 +655,10 @@ class _AboutUsState extends State<AboutUs> {
                                                   child: IconButton(
                                                     onPressed: (){
                                                       launch(
-                                                          "mailto:raselhassan711@gmail.com?subjectimamhossen983@");
+                                                          "mailto:mdalamincse6615@gmail.com?subjectimamhossen983@");
                                                     },
 
-                                                    icon:  FaIcon(FontAwesomeIcons.envelope),
+                                                    icon:  const FaIcon(FontAwesomeIcons.envelope),
                                                   ),
                                                 ),
                                                 Container(
@@ -661,9 +670,9 @@ class _AboutUsState extends State<AboutUs> {
                                                   width: 60,
                                                   child: IconButton(
                                                     onPressed: (){
-                                                      _launchInWebViewOrVC("https://www.linkedin.com/in/rasel-hassan-239a69229");
+                                                      _launchInWebViewOrVC("https://www.linkedin.com/in/imam-hossen-16a380199");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.linkedin),
+                                                    icon: const FaIcon(FontAwesomeIcons.linkedin),
                                                   ),
                                                 ),
                                                 Container(
@@ -675,9 +684,9 @@ class _AboutUsState extends State<AboutUs> {
                                                   width: 60,
                                                   child: IconButton(
                                                     onPressed: (){
-                                                      _launchInWebViewOrVC("https://github.com/Rasel-Hassan");
+                                                      _launchInWebViewOrVC("https://github.com/Imam875");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.github),
+                                                    icon: const FaIcon(FontAwesomeIcons.github),
                                                   ),
                                                 ),
                                               ],
@@ -689,9 +698,9 @@ class _AboutUsState extends State<AboutUs> {
                                   ),
                                 ),
                               ),
-                              SizedBox(height: 20,),
+                              const SizedBox(height: 20,),
                               Center(
-                                child: Container(
+                                child: SizedBox(
                                   height:MediaQuery.of(context).size.height*.45,
                                   width: MediaQuery
                                       .of(context)
@@ -699,7 +708,7 @@ class _AboutUsState extends State<AboutUs> {
                                       .width * .82,
                                   child: Card(
                                     elevation: 10,
-                                    shape: OutlineInputBorder(
+                                    shape: const OutlineInputBorder(
                                       borderRadius: BorderRadius.only(
                                           topRight: Radius.circular(20),
                                           topLeft: Radius.circular(20),
@@ -715,21 +724,21 @@ class _AboutUsState extends State<AboutUs> {
                                         crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                         children: [
-                                          CircleAvatar(
+                                          const CircleAvatar(
                                             backgroundImage: AssetImage(
                                                 "assets/zisan.jpg"),
                                             maxRadius: 50,
                                           ),
-                                          SizedBox(height: 15,),
-                                          Text("Sharif Ullah Zisan", style: TextStyle(
+                                          const SizedBox(height: 15,),
+                                          const Text("Sharif Ullah Zisan", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
-                                          Text("ID: A3-1873", style: TextStyle(
+                                          const Text("AI Designation", style: TextStyle(
                                               fontSize: 20,
                                               color: Colors.black45,
                                               fontStyle: FontStyle.italic),),
-                                          SizedBox(height: 15,),
-                                          Text("Flutter Developer",
+                                          const SizedBox(height: 15,),
+                                          const Text("Flutter Developer",
                                             style: TextStyle(fontSize: 25,
                                                 color: Colors.black),),
                                           Container(
@@ -750,7 +759,7 @@ class _AboutUsState extends State<AboutUs> {
                                                         ){
                                                       _launchInWebViewOrVC("https://www.facebook.com/itz.zisan");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.facebook,
+                                                    icon: const FaIcon(FontAwesomeIcons.facebook,
                                                     ),
                                                   ),
                                                 ),
@@ -767,7 +776,7 @@ class _AboutUsState extends State<AboutUs> {
                                                           "mailto:sharifullahzisan@gmail.com?subjectimamhossen983@");
                                                     },
 
-                                                    icon:  FaIcon(FontAwesomeIcons.envelope),
+                                                    icon:  const FaIcon(FontAwesomeIcons.envelope),
                                                   ),
                                                 ),
                                                 Container(
@@ -781,7 +790,7 @@ class _AboutUsState extends State<AboutUs> {
                                                     onPressed: (){
                                                       _launchInWebViewOrVC("https://www.linkedin.com/in/sharif-ullah-zisan-33778516b");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.linkedin),
+                                                    icon: const FaIcon(FontAwesomeIcons.linkedin),
                                                   ),
                                                 ),
                                                 Container(
@@ -795,7 +804,7 @@ class _AboutUsState extends State<AboutUs> {
                                                     onPressed: (){
                                                       _launchInWebViewOrVC("https://github.com/sharifullahzisan");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.github),
+                                                    icon: const FaIcon(FontAwesomeIcons.github),
                                                   ),
                                                 ),
                                               ],
@@ -807,9 +816,9 @@ class _AboutUsState extends State<AboutUs> {
                                   ),
                                 ),
                               ),
-                              SizedBox(height: 20,),
+                              const SizedBox(height: 20,),
                               Center(
-                                child: Container(
+                                child: SizedBox(
                                   height: MediaQuery.of(context).size.height*.45,
                                   width: MediaQuery
                                       .of(context)
@@ -817,7 +826,7 @@ class _AboutUsState extends State<AboutUs> {
                                       .width * .82,
                                   child: Card(
                                     elevation: 10,
-                                    shape: OutlineInputBorder(
+                                    shape: const OutlineInputBorder(
                                       borderRadius: BorderRadius.only(
                                           topRight: Radius.circular(20),
                                           topLeft: Radius.circular(20),
@@ -833,21 +842,21 @@ class _AboutUsState extends State<AboutUs> {
                                         crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                         children: [
-                                          CircleAvatar(
+                                          const CircleAvatar(
                                             backgroundImage: AssetImage(
                                                 "assets/Ishak.jpg"),
                                             maxRadius: 50,
                                           ),
-                                          SizedBox(height: 15,),
-                                          Text("Md Ishak", style: TextStyle(
+                                          const SizedBox(height: 15,),
+                                          const Text("Md Ishak", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
-                                          Text("ID: A3-1865", style: TextStyle(
+                                          const Text("AI Designation", style: TextStyle(
                                               fontSize: 20,
                                               color: Colors.black45,
                                               fontStyle: FontStyle.italic),),
-                                          SizedBox(height: 15,),
-                                          Text("Flutter Developer",
+                                          const SizedBox(height: 15,),
+                                          const Text("Flutter Developer",
                                             style: TextStyle(fontSize: 25,
                                                 color: Colors.black),),
                                           Container(
@@ -868,7 +877,7 @@ class _AboutUsState extends State<AboutUs> {
                                                         ){
                                                       _launchInWebViewOrVC("https://m.facebook.com/hm.jebon.77");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.facebook,
+                                                    icon: const FaIcon(FontAwesomeIcons.facebook,
                                                     ),
                                                   ),
                                                 ),
@@ -885,7 +894,7 @@ class _AboutUsState extends State<AboutUs> {
                                                           "mailto:rajunhowlader837@gmail.com?subjectimamhossen983@");
                                                     },
 
-                                                    icon:  FaIcon(FontAwesomeIcons.envelope),
+                                                    icon:  const FaIcon(FontAwesomeIcons.envelope),
                                                   ),
                                                 ),
                                                 Container(
@@ -899,7 +908,7 @@ class _AboutUsState extends State<AboutUs> {
                                                     onPressed: (){
                                                       _launchInWebViewOrVC("https://www.linkedin.com/in/rajun-howlader-20154a230");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.linkedin),
+                                                    icon: const FaIcon(FontAwesomeIcons.linkedin),
                                                   ),
                                                 ),
                                                 Container(
@@ -913,7 +922,7 @@ class _AboutUsState extends State<AboutUs> {
                                                     onPressed: (){
                                                       _launchInWebViewOrVC("https://github.com/Mdishak145");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.github),
+                                                    icon: const FaIcon(FontAwesomeIcons.github),
                                                   ),
                                                 ),
                                               ],
@@ -925,9 +934,9 @@ class _AboutUsState extends State<AboutUs> {
                                   ),
                                 ),
                               ),
-                              SizedBox(height: 20,),
+                              const SizedBox(height: 20,),
                               Center(
-                                child: Container(
+                                child: SizedBox(
                                   height: MediaQuery.of(context).size.height*.45,
                                   width: MediaQuery
                                       .of(context)
@@ -935,7 +944,7 @@ class _AboutUsState extends State<AboutUs> {
                                       .width * .82,
                                   child: Card(
                                     elevation: 10,
-                                    shape: OutlineInputBorder(
+                                    shape: const OutlineInputBorder(
                                       borderRadius: BorderRadius.only(
                                           topRight: Radius.circular(20),
                                           topLeft: Radius.circular(20),
@@ -951,21 +960,21 @@ class _AboutUsState extends State<AboutUs> {
                                         crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                         children: [
-                                          CircleAvatar(
+                                          const CircleAvatar(
                                             backgroundImage: AssetImage(
                                                 "assets/senha.jpg"),
                                             maxRadius: 50,
                                           ),
-                                          SizedBox(height: 15,),
-                                          Text("Senhasish", style: TextStyle(
+                                          const SizedBox(height: 15,),
+                                          const Text("Senhasish", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
-                                          Text("ID: A3-1875", style: TextStyle(
+                                          const Text("AI Designation", style: TextStyle(
                                               fontSize: 20,
                                               color: Colors.black45,
                                               fontStyle: FontStyle.italic),),
-                                          SizedBox(height: 15,),
-                                          Text("Flutter Developer",
+                                          const SizedBox(height: 15,),
+                                          const Text("Flutter Developer",
                                             style: TextStyle(fontSize: 25,
                                                 color: Colors.black),),
                                           Container(
@@ -984,9 +993,9 @@ class _AboutUsState extends State<AboutUs> {
                                                   child: IconButton(
                                                     onPressed: (
                                                         ){
-                                                      _launchInWebViewOrVC("https://www.facebook.com/senha.420");
+                                                      _launchInWebViewOrVC("https://www.facebook.com/imamhossen983");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.facebook,
+                                                    icon: const FaIcon(FontAwesomeIcons.facebook,
                                                     ),
                                                   ),
                                                 ),
@@ -1000,10 +1009,10 @@ class _AboutUsState extends State<AboutUs> {
                                                   child: IconButton(
                                                     onPressed: (){
                                                       launch(
-                                                          "mailto:nonstopgeregere790@gmail.com?subjectnonstopgeregere790@");
+                                                          "mailto:mdalamincse6615@gmail.com?subjectimamhossen983@");
                                                     },
 
-                                                    icon:  FaIcon(FontAwesomeIcons.envelope),
+                                                    icon:  const FaIcon(FontAwesomeIcons.envelope),
                                                   ),
                                                 ),
                                                 Container(
@@ -1015,9 +1024,9 @@ class _AboutUsState extends State<AboutUs> {
                                                   width: 60,
                                                   child: IconButton(
                                                     onPressed: (){
-                                                      _launchInWebViewOrVC("https://www.linkedin.com/in/");
+                                                      _launchInWebViewOrVC("https://www.linkedin.com/in/imam-hossen-16a380199");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.linkedin),
+                                                    icon: const FaIcon(FontAwesomeIcons.linkedin),
                                                   ),
                                                 ),
                                                 Container(
@@ -1029,9 +1038,9 @@ class _AboutUsState extends State<AboutUs> {
                                                   width: 60,
                                                   child: IconButton(
                                                     onPressed: (){
-                                                      _launchInWebViewOrVC("https://github.com/SENHASISH");
+                                                      _launchInWebViewOrVC("https://github.com/Imam875");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.github),
+                                                    icon: const FaIcon(FontAwesomeIcons.github),
                                                   ),
                                                 ),
                                               ],
@@ -1043,9 +1052,9 @@ class _AboutUsState extends State<AboutUs> {
                                   ),
                                 ),
                               ),
-                              SizedBox(height: 20,),
+                              const SizedBox(height: 20,),
                               Center(
-                                child: Container(
+                                child: SizedBox(
                                   height:MediaQuery.of(context).size.height*.45,
                                   width: MediaQuery
                                       .of(context)
@@ -1053,7 +1062,7 @@ class _AboutUsState extends State<AboutUs> {
                                       .width * .82,
                                   child: Card(
                                     elevation: 10,
-                                    shape: OutlineInputBorder(
+                                    shape: const OutlineInputBorder(
                                       borderRadius: BorderRadius.only(
                                           topRight: Radius.circular(20),
                                           topLeft: Radius.circular(20),
@@ -1069,21 +1078,21 @@ class _AboutUsState extends State<AboutUs> {
                                         crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                         children: [
-                                          CircleAvatar(
+                                          const CircleAvatar(
                                             backgroundImage: AssetImage(
                                                 "assets/tomal.jpg"),
                                             maxRadius: 50,
                                           ),
-                                          SizedBox(height: 15,),
-                                          Text("Shahrear Tomal", style: TextStyle(
+                                          const SizedBox(height: 15,),
+                                          const Text("Shahrear Tomal", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
-                                          Text("ID: A3-1863", style: TextStyle(
+                                          const Text("AI Designation", style: TextStyle(
                                               fontSize: 20,
                                               color: Colors.black45,
                                               fontStyle: FontStyle.italic),),
-                                          SizedBox(height: 15,),
-                                          Text("Flutter Developer",
+                                          const SizedBox(height: 15,),
+                                          const Text("Flutter Developer",
                                             style: TextStyle(fontSize: 25,
                                                 color: Colors.black),),
                                           Container(
@@ -1102,9 +1111,9 @@ class _AboutUsState extends State<AboutUs> {
                                                   child: IconButton(
                                                     onPressed: (
                                                         ){
-                                                      _launchInWebViewOrVC("https://www.facebook.com/tomal.ahmed.5682944");
+                                                      _launchInWebViewOrVC("https://www.facebook.com/imamhossen983");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.facebook,
+                                                    icon: const FaIcon(FontAwesomeIcons.facebook,
                                                     ),
                                                   ),
                                                 ),
@@ -1118,10 +1127,10 @@ class _AboutUsState extends State<AboutUs> {
                                                   child: IconButton(
                                                     onPressed: (){
                                                       launch(
-                                                          "mailto:shahreartomal@gmail.com?subjectimamhossen983@");
+                                                          "mailto:mdalamincse6615@gmail.com?subjectimamhossen983@");
                                                     },
 
-                                                    icon:  FaIcon(FontAwesomeIcons.envelope),
+                                                    icon:  const FaIcon(FontAwesomeIcons.envelope),
                                                   ),
                                                 ),
                                                 Container(
@@ -1133,9 +1142,9 @@ class _AboutUsState extends State<AboutUs> {
                                                   width: 60,
                                                   child: IconButton(
                                                     onPressed: (){
-                                                      _launchInWebViewOrVC("https://www.linkedin.com/in/");
+                                                      _launchInWebViewOrVC("https://www.linkedin.com/in/imam-hossen-16a380199");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.linkedin),
+                                                    icon: const FaIcon(FontAwesomeIcons.linkedin),
                                                   ),
                                                 ),
                                                 Container(
@@ -1147,9 +1156,9 @@ class _AboutUsState extends State<AboutUs> {
                                                   width: 60,
                                                   child: IconButton(
                                                     onPressed: (){
-                                                      _launchInWebViewOrVC("https://github.com/");
+                                                      _launchInWebViewOrVC("https://github.com/Imam875");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.github),
+                                                    icon: const FaIcon(FontAwesomeIcons.github),
                                                   ),
                                                 ),
                                               ],
@@ -1161,9 +1170,9 @@ class _AboutUsState extends State<AboutUs> {
                                   ),
                                 ),
                               ),
-                              SizedBox(height: 20,),
+                              const SizedBox(height: 20,),
                               Center(
-                                child: Container(
+                                child: SizedBox(
                                   height: MediaQuery.of(context).size.height*.45,
                                   width: MediaQuery
                                       .of(context)
@@ -1171,7 +1180,7 @@ class _AboutUsState extends State<AboutUs> {
                                       .width * .82,
                                   child: Card(
                                     elevation: 10,
-                                    shape: OutlineInputBorder(
+                                    shape: const OutlineInputBorder(
                                       borderRadius: BorderRadius.only(
                                           topRight: Radius.circular(20),
                                           topLeft: Radius.circular(20),
@@ -1187,21 +1196,21 @@ class _AboutUsState extends State<AboutUs> {
                                         crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                         children: [
-                                          CircleAvatar(
+                                          const CircleAvatar(
                                             backgroundImage: AssetImage(
                                                 "assets/mithun.jpg"),
                                             maxRadius: 50,
                                           ),
-                                          SizedBox(height: 15,),
-                                          Text("Mithun Mandal", style: TextStyle(
+                                          const SizedBox(height: 15,),
+                                          const Text("Mithun Mandal", style: TextStyle(
                                               fontWeight: FontWeight.bold,
                                               fontSize: 30),),
-                                          Text("ID: A3-1864", style: TextStyle(
+                                          const Text("AI Designation", style: TextStyle(
                                               fontSize: 20,
                                               color: Colors.black45,
                                               fontStyle: FontStyle.italic),),
-                                          SizedBox(height: 15,),
-                                          Text("Flutter Developer",
+                                          const SizedBox(height: 15,),
+                                          const Text("Flutter Developer",
                                             style: TextStyle(fontSize: 25,
                                                 color: Colors.black),),
                                           Container(
@@ -1222,7 +1231,7 @@ class _AboutUsState extends State<AboutUs> {
                                                         ){
                                                       _launchInWebViewOrVC("https://www.facebook.com/mithunmandal00");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.facebook,
+                                                    icon: const FaIcon(FontAwesomeIcons.facebook,
                                                     ),
                                                   ),
                                                 ),
@@ -1239,7 +1248,7 @@ class _AboutUsState extends State<AboutUs> {
                                                           "mailto:mail.mithunmandal@gmail.com?subjectimamhossen983@");
                                                     },
 
-                                                    icon:  FaIcon(FontAwesomeIcons.envelope),
+                                                    icon:  const FaIcon(FontAwesomeIcons.envelope),
                                                   ),
                                                 ),
                                                 Container(
@@ -1253,7 +1262,7 @@ class _AboutUsState extends State<AboutUs> {
                                                     onPressed: (){
                                                       _launchInWebViewOrVC("https://www.linkedin.com/in/mithun-mandal");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.linkedin),
+                                                    icon: const FaIcon(FontAwesomeIcons.linkedin),
                                                   ),
                                                 ),
                                                 Container(
@@ -1267,7 +1276,7 @@ class _AboutUsState extends State<AboutUs> {
                                                     onPressed: (){
                                                       _launchInWebViewOrVC("https://github.com/mithunAP");
                                                     },
-                                                    icon: FaIcon(FontAwesomeIcons.github),
+                                                    icon: const FaIcon(FontAwesomeIcons.github),
                                                   ),
                                                 ),
                                               ],
@@ -1282,13 +1291,13 @@ class _AboutUsState extends State<AboutUs> {
                             ],),
                         ),
                         elevation: 10,
-                        shape: OutlineInputBorder(
+                        shape: const OutlineInputBorder(
                           borderRadius: BorderRadius.only(
                               topRight: Radius.circular(25),
                               topLeft: Radius.circular(20),
                               bottomRight: Radius.circular(20),
                               bottomLeft: Radius.circular(20)),
-                          borderSide: BorderSide(color: Colors.purple),
+                          borderSide: BorderSide(color: Colors.white),
                         ),
                       ),
                     ),
