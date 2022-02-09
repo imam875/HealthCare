@@ -23,10 +23,10 @@ class _DashBoardState extends State<HealthDetails> {
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
-            foregroundColor: Colors.white,
+            foregroundColor: Colors.purple,
             title: Text(
               widget.name,
-              style: const TextStyle(fontSize: 24),
+              style: const TextStyle(fontSize: 24,fontWeight: FontWeight.bold),
             ),
             pinned: true,
             snap: true,
@@ -37,19 +37,14 @@ class _DashBoardState extends State<HealthDetails> {
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(30),
                     bottomRight: Radius.circular(30))),
-            flexibleSpace: Container(color: Colors.indigoAccent,
-              child: Padding(
-                padding: const EdgeInsets.only(top: 42.0,),
-                child: FlexibleSpaceBar(
-                  background: ClipRRect(
-                    borderRadius: const BorderRadius.vertical(
-                      bottom: Radius.circular(20),
-                    ),
-                    child: SafeArea(
-                      child: Image.asset(
-                        widget.image,fit: BoxFit.cover,
-                      ),
-                    ),
+            flexibleSpace: FlexibleSpaceBar(
+              background: ClipRRect(
+                borderRadius: const BorderRadius.vertical(
+                  bottom: Radius.circular(20),
+                ),
+                child: SafeArea(
+                  child: Image.asset(
+                    widget.image,fit: BoxFit.cover,
                   ),
                 ),
               ),

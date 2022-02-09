@@ -27,8 +27,8 @@ class _DashBoardState extends State<FoodDetails> {
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
-            foregroundColor: Colors.white,shadowColor: Colors.blue,
-            title: Container(color: const Color(0xFA8784EF),child: Text(widget.name,style :const TextStyle(fontSize: 24,),)),
+            foregroundColor: Colors.purple,shadowColor: Colors.blue,
+            title: Container(child: Text(widget.name,style :const TextStyle(fontSize: 24,fontWeight: FontWeight.bold))),
             pinned: true,
             snap: true,
             floating: true,

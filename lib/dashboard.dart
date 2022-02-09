@@ -58,25 +58,28 @@ class _DashBoardState extends State<DashBoard> {
         ),
         body: ListView(
           children: [
-            SizedBox(
-                width: MediaQuery.of(context).size.width,
+            Container(
+                width: MediaQuery.of(context).size.width*.8,
                 height: MediaQuery.of(context).size.height,
-                child: Column(children: [
+                child: Column(
+                    children: [
                   ///abouat text Category section.................
-                  Container(color: const Color(0xFA716EE5),
-                      alignment: Alignment.topCenter,
-                      width: MediaQuery.of(context).size.width,
-                      child: const Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: Text(
-                          "বিভিন্ন খাবারের উপকারিতা",
-                          style: TextStyle(
-                              fontSize: 22,
-                              color: Colors.white,
-                              wordSpacing: .8,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      )),
+                  Card(
+                    child: Container(color: const Color(0xFA716EE3),
+                        alignment: Alignment.topCenter,
+                        width: MediaQuery.of(context).size.width,
+                        child: const Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text(
+                            "বিভিন্ন খাবারের উপকারিতা",
+                            style: TextStyle(
+                                fontSize: 22,
+                                color: Colors.white,
+                                wordSpacing: .8,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        )),
+                  ),
 
                   ///Category section food..............
                   FutureBuilder(
@@ -90,118 +93,115 @@ class _DashBoardState extends State<DashBoard> {
                           );
                         } else if (imam.hasData) {
                           var Hossen = imam.data as List<FoodModel>;
-                          return Padding(
-                            padding: const EdgeInsets.only(bottom: 15),
-                            child: SizedBox(
-                              height: MediaQuery.of(context).size.height * .25,
-                              width: MediaQuery.of(context).size.width,
-                              child: ListView.builder(
-                                  scrollDirection: Axis.horizontal,
-                                  itemCount: Hossen.length,
-                                  itemBuilder: (context, index) {
-                                    return Padding(
-                                      padding: const EdgeInsets.only(left: 10),
-                                      child: InkWell(
-                                        child: Card(
-                                          color: const Color(0xFA8784EF),
-                                          shape: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(30),
-                                              borderSide: const BorderSide(
-                                                  color: Colors.white)),
-                                          elevation: 15,
-                                          child: SizedBox(
-                                            height: MediaQuery.of(context)
-                                                .size
-                                                .height,
-                                            width: MediaQuery.of(context)
+                          return SizedBox(
+                            height: MediaQuery.of(context).size.height * .27,
+                            width: MediaQuery.of(context).size.width,
+                            child: ListView.builder(
+                                scrollDirection: Axis.horizontal,
+                                itemCount: Hossen.length,
+                                itemBuilder: (context, index) {
+                                  return Padding(
+                                    padding: const EdgeInsets.only(left: 10),
+                                    child: InkWell(
+                                      child: Card(
+                                        color: Colors.indigoAccent,
+                                        shape: OutlineInputBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(30),
+                                            borderSide: const BorderSide(
+                                                color: Colors.white)),
+                                        elevation: 15,
+                                        child: SizedBox(
+                                          height: MediaQuery.of(context)
+                                              .size
+                                              .height,
+                                          width: MediaQuery.of(context)
+                                                  .size
+                                                  .width *
+                                              .75,
+                                          child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              SizedBox(
+                                                height: 130,
+                                                width: MediaQuery.of(context)
                                                     .size
-                                                    .width *
-                                                .75,
-                                            child: Column(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.start,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                SizedBox(
-                                                  height: 130,
-                                                  width: MediaQuery.of(context)
-                                                      .size
-                                                      .width,
-                                                  child: ClipRRect(
-                                                    child: Image.asset(
-                                                      Hossen[index]
-                                                          .image
-                                                          .toString(),
-                                                      fit: BoxFit.cover,
-                                                    ),
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            30),
+                                                    .width,
+                                                child: ClipRRect(
+                                                  child: Image.asset(
+                                                    Hossen[index]
+                                                        .image
+                                                        .toString(),
+                                                    fit: BoxFit.cover,
+                                                  ),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          30),
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.only(
+                                                        left: 15.0, top: 5),
+                                                child: Text(
+                                                    Hossen[index]
+                                                        .name
+                                                        .toString(),
+                                                    textAlign: TextAlign.left,
+                                                    style: const TextStyle(
+                                                        fontSize: 21,
+                                                        fontWeight:
+                                                            FontWeight.bold)),
+                                              ),
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.only(
+                                                        left: 15.0),
+                                                child: Text(
+                                                  Hossen[index]
+                                                      .category
+                                                      .toString(),
+                                                  style: const TextStyle(
+                                                    fontSize: 19,
                                                   ),
                                                 ),
-                                                Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                          left: 15.0, top: 5),
-                                                  child: Text(
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                      onTap: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (Contex) =>
+                                                    FoodDetails(
                                                       Hossen[index]
                                                           .name
                                                           .toString(),
-                                                      textAlign: TextAlign.left,
-                                                      style: const TextStyle(
-                                                          fontSize: 21,
-                                                          fontWeight:
-                                                              FontWeight.bold)),
-                                                ),
-                                                Padding(
-                                                  padding:
-                                                      const EdgeInsets.only(
-                                                          left: 15.0),
-                                                  child: Text(
-                                                    Hossen[index]
-                                                        .category
-                                                        .toString(),
-                                                    style: const TextStyle(
-                                                      fontSize: 19,
-                                                    ),
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                        ),
-                                        onTap: () {
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (Contex) =>
-                                                      FoodDetails(
-                                                        Hossen[index]
-                                                            .name
-                                                            .toString(),
-                                                        Hossen[index]
-                                                            .title
-                                                            .toString(),
-                                                        Hossen[index]
-                                                            .subtitle
-                                                            .toString(),
-                                                        Hossen[index]
-                                                            .category
-                                                            .toString(),
-                                                        Hossen[index]
-                                                            .description
-                                                            .toString(),
-                                                        Hossen[index]
-                                                            .image
-                                                            .toString(),
-                                                      )));
-                                        },
-                                      ),
-                                    );
-                                  }),
-                            ),
+                                                      Hossen[index]
+                                                          .title
+                                                          .toString(),
+                                                      Hossen[index]
+                                                          .subtitle
+                                                          .toString(),
+                                                      Hossen[index]
+                                                          .category
+                                                          .toString(),
+                                                      Hossen[index]
+                                                          .description
+                                                          .toString(),
+                                                      Hossen[index]
+                                                          .image
+                                                          .toString(),
+                                                    )));
+                                      },
+                                    ),
+                                  );
+                                }),
                           );
                         } else {
                           return const Center(
@@ -211,20 +211,22 @@ class _DashBoardState extends State<DashBoard> {
                       }),
 
                   ///abouat Text gym section.................
-                  Container(
-                      color: const Color(0xFA716EE5),
-                      alignment: Alignment.topCenter,
-                      width: MediaQuery.of(context).size.width,
-                      child: const Padding(
-                        padding: EdgeInsets.all(2.0),
-                        child: Text(
-                          "শরীরচর্চা",
-                          style: TextStyle(
-                              fontSize: 22,
-                              wordSpacing: .8,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      )),
+                  Card(
+                    child: Container(
+                        color: const Color(0xFA716EE3),
+                        alignment: Alignment.topCenter,
+                        width: MediaQuery.of(context).size.width,
+                        child: const Padding(
+                          padding: EdgeInsets.all(2.0),
+                          child: Text(
+                            "শরীরচর্চা",
+                            style: TextStyle(
+                                fontSize: 22,
+                                wordSpacing: .8,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        )),
+                  ),
 
                   ///category gym section......................
                   Padding(
@@ -260,17 +262,19 @@ class _DashBoardState extends State<DashBoard> {
                   ),
 
                   ///about text Slider section.................
-                  Container(
-                    color: const Color(0xFA716EE5),
+                  Card(
+                    child: Container(
+                      color: const Color(0xFA716EE3),
 
-                    alignment: Alignment.topCenter,
-                    width: MediaQuery.of(context).size.width,
-                    child: const Text(
-                      "শরীরের যত্ন",
-                      style: TextStyle(
-                          fontSize: 22,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold),
+                      alignment: Alignment.topCenter,
+                      width: MediaQuery.of(context).size.width,
+                      child: const Text(
+                        "শরীরের যত্ন",
+                        style: TextStyle(
+                            fontSize: 22,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
                   ),
 
@@ -721,8 +725,6 @@ class _PopupMenuContentState extends State<PopupMenuContent>
                                 },
                               ),
                             ),
-                            //Chat box
-
                             const SizedBox(
                               height: 10,
                             ),
